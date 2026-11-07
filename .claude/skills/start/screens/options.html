@@ -1,0 +1,92 @@
+<h2 class="sr-only">Compare the options and choose</h2>
+<div id="opts" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; padding:0.5rem 0"></div>
+<div id="foot" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; padding:0.5rem 0 1rem"></div>
+<script>
+const DATA = {"multi": true, "prompt": "My short-list for Comporta:", "more": "Show me other places to stay in Comporta", "labels": {"choose": "Choose", "link": "See photos", "pick": "Our pick", "confirm": "Confirm my short-list", "more": "Other options", "pickOne": "Pick at least one first", "selected": "Selected"}, "options": [{"id": "comporta-01", "title": "Herdade do Sal Resort", "subtitle": "Carvalhal · resort with villas", "recommended": true, "facts": [{"icon": "ti-eye", "text": "Rice paddies, dunes behind"}, {"icon": "ti-pool", "text": "Private plunge pool"}, {"icon": "ti-star", "text": "9.3/10, 520 reviews"}], "price": "$840", "priceNote": "3 nights, taxes and fees in", "link": "https://www.example.com/sample/comporta-01"}, {"id": "comporta-02", "title": "Cabana Arrozal Villas", "subtitle": "Pego · wooden villas", "facts": [{"icon": "ti-eye", "text": "Rice fields at sunset"}, {"icon": "ti-pool", "text": "Shared pool"}, {"icon": "ti-star", "text": "4.95/5"}], "price": "$720", "priceNote": "3 nights, cleaning in", "link": "https://www.example.com/sample/comporta-02"}, {"id": "comporta-03", "title": "Pinhal Beach Cottage", "subtitle": "Brejos · cottage in the pines", "facts": [{"icon": "ti-eye", "text": "Pines, a glimpse of the estuary"}, {"icon": "ti-bike", "text": "Bikes to the beach"}, {"icon": "ti-star", "text": "4.8/5"}], "price": "$540", "priceNote": "3 nights, cleaning in", "link": "https://www.example.com/sample/comporta-03"}]};
+const L = DATA.labels;
+const picked = new Set();
+const cards = new Map();
+function el(tag, css, text) { const e = document.createElement(tag); if (css) e.style.cssText = css; if (text !== undefined) e.textContent = text; return e; }
+function icon(name, css) { const i = el("i", css); i.className = "ti " + name; i.setAttribute("aria-hidden", "true"); return i; }
+function paint(o) {
+  const c = cards.get(o.id);
+  const on = picked.has(o.id);
+  c.card.style.border = on ? "2px solid var(--border-accent)" : (o.recommended && !DATA.multi ? "2px solid var(--border-accent)" : "0.5px solid var(--border)");
+  c.card.setAttribute("aria-pressed", on ? "true" : "false");
+  if (c.mark) { c.mark.className = "ti " + (on ? "ti-circle-check" : "ti-circle"); c.mark.style.color = on ? "var(--text-accent)" : "var(--text-muted)"; }
+  if (confirmBtn) confirmBtn.textContent = L.confirm + (picked.size ? " (" + picked.size + ")" : "") + " ↗";
+}
+const err = el("span", "font-size:13px; color:var(--text-danger); margin-right:auto");
+let confirmBtn = null;
+for (const o of DATA.options) {
+  const card = el("div", "display:flex; flex-direction:column; gap:10px; padding:1rem 1.25rem; border-radius:12px; background:var(--surface-2); min-width:0");
+  const top = el("div", "display:flex; justify-content:space-between; align-items:center; gap:8px; min-height:22px");
+  if (o.recommended) top.appendChild(el("span", "font-size:12px; padding:2px 10px; border-radius:var(--radius); background:var(--bg-accent); color:var(--text-accent)", L.pick));
+  else if (o.badge) top.appendChild(el("span", "font-size:12px; padding:2px 10px; border-radius:var(--radius); background:var(--surface-1); color:var(--text-secondary)", o.badge));
+  else top.appendChild(el("span"));
+  let mark = null;
+  if (DATA.multi) { mark = icon("ti-circle", "font-size:20px"); top.appendChild(mark); }
+  card.appendChild(top);
+  card.appendChild(el("div", "font-size:16px; font-weight:500; color:var(--text-primary); line-height:1.35", o.title));
+  if (o.subtitle) card.appendChild(el("div", "font-size:13px; color:var(--text-secondary)", o.subtitle));
+  const facts = el("div", "display:flex; flex-direction:column; gap:6px; padding-top:4px");
+  for (const f of o.facts || []) {
+    const row = el("div", "display:flex; gap:8px; align-items:flex-start; font-size:13px; color:var(--text-secondary); line-height:1.45");
+    row.appendChild(icon(f.icon || "ti-point", "font-size:16px; margin-top:1px; color:var(--text-muted)"));
+    row.appendChild(el("span", "", f.text));
+    facts.appendChild(row);
+  }
+  card.appendChild(facts);
+  if (o.price) {
+    const p = el("div", "display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:6px; border-top:0.5px solid var(--border)");
+    p.appendChild(el("span", "font-size:20px; font-weight:500; color:var(--text-primary)", o.price));
+    if (o.priceNote) p.appendChild(el("span", "font-size:12px; color:var(--text-muted)", o.priceNote));
+    card.appendChild(p);
+  }
+  const actions = el("div", "display:flex; gap:8px; flex-wrap:wrap");
+  if (o.link) {
+    const a = el("button", "font-size:13px");
+    a.type = "button";
+    a.appendChild(icon("ti-external-link", "font-size:16px; vertical-align:-3px; margin-right:4px"));
+    a.appendChild(document.createTextNode(o.linkLabel || L.link));
+    a.addEventListener("click", (ev) => { ev.stopPropagation(); openLink(o.link); });
+    actions.appendChild(a);
+  }
+  if (!DATA.multi) {
+    const b = el("button", "font-size:13px", L.choose + " ↗");
+    b.type = "button";
+    b.addEventListener("click", () => sendPrompt(DATA.prompt + " " + o.title));
+    actions.appendChild(b);
+  }
+  card.appendChild(actions);
+  if (DATA.multi) {
+    card.setAttribute("role", "button");
+    card.tabIndex = 0;
+    card.style.cursor = "pointer";
+    const toggle = () => { picked.has(o.id) ? picked.delete(o.id) : picked.add(o.id); err.textContent = ""; paint(o); };
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); toggle(); } });
+  }
+  cards.set(o.id, {card, mark});
+  document.getElementById("opts").appendChild(card);
+}
+const foot = document.getElementById("foot");
+foot.appendChild(err);
+if (DATA.more) {
+  const m = el("button", "font-size:13px", L.more + " ↗");
+  m.type = "button";
+  m.addEventListener("click", () => sendPrompt(DATA.more));
+  foot.appendChild(m);
+}
+if (DATA.multi) {
+  confirmBtn = el("button", "font-size:13px; font-weight:500; border:0.5px solid var(--border-accent); color:var(--text-accent)");
+  confirmBtn.type = "button";
+  confirmBtn.addEventListener("click", () => {
+    if (!picked.size) { err.textContent = L.pickOne; return; }
+    const names = DATA.options.filter((o) => picked.has(o.id)).map((o) => o.title);
+    sendPrompt(DATA.prompt + " " + names.join(", "));
+  });
+  foot.appendChild(confirmBtn);
+}
+for (const o of DATA.options) paint(o);
+</script>

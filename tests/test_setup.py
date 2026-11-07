@@ -153,7 +153,7 @@ class SetupTests(unittest.TestCase):
         with open(os.path.join(self.root, ".setup", "state.json"), "w") as f:
             json.dump({"date": "2026-11-07", "services_enabled": []}, f)
         code, out, _ = run(["hook"], self.root)
-        self.assertEqual(out, "Setup done 2026-11-07. Active trip: none.\n")
+        self.assertEqual(out, "Setup done 2026-11-07. Active trip: none. Load the start skill.\n")
         self.assertEqual(len(out.splitlines()), 1)
 
     def test_hook_names_active_trip(self):
@@ -168,7 +168,7 @@ class SetupTests(unittest.TestCase):
         with mock.patch.dict(os.environ, {}, clear=False):
             os.environ.pop("TRIP_DIR", None)
             _, out, _ = run(["hook"], self.root)
-        self.assertEqual(out, "Setup done 2026-11-07. Active trip: sample-portugal.\n")
+        self.assertEqual(out, "Setup done 2026-11-07. Active trip: sample-portugal. Load the start skill.\n")
 
     def test_done_writes_state(self):
         code, out, _ = run(["done"], self.root)

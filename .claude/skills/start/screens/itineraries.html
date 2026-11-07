@@ -1,0 +1,74 @@
+<h2 class="sr-only">Compare the itineraries and choose one</h2>
+<div id="its" style="display:flex; flex-direction:column; gap:12px; padding:0.5rem 0 1rem"></div>
+<script>
+const DATA = {"prompt": "I pick the itinerary:", "labels": {"choose": "Choose", "pick": "Our pick", "nights": "nights", "night": "night", "total": "Rough total"}, "options": [{"title": "Three stages, unhurried", "sub": "City, rice fields and beach, then the Douro", "recommended": true, "stages": [{"title": "Lisbon", "nights": 3}, {"title": "Comporta", "nights": 3}, {"title": "Porto", "nights": 3}], "legs": [{"mode": "car", "text": "Lisbon to Comporta, 1 h 30"}, {"mode": "plane", "text": "Comporta to Porto via Lisbon, 3 h"}], "budget": "$6,100", "why": "One move every three days, a beach in the middle"}, {"title": "Two cities only", "sub": "No car, trains only", "stages": [{"title": "Lisbon", "nights": 5}, {"title": "Porto", "nights": 4}], "legs": [{"mode": "train", "text": "Lisbon to Porto, 2 h 50"}], "budget": "$5,200", "why": "The calmest, the cheapest, no beach stay"}]};
+const L = DATA.labels;
+const ramps = ["c-teal", "c-purple", "c-coral", "c-pink", "c-blue", "c-amber"];
+const rampOf = new Map();
+const legIcon = {plane: "ti-plane", train: "ti-train", car: "ti-car", bus: "ti-bus", ferry: "ti-ship", boat: "ti-ship", walk: "ti-walk"};
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, css, text) { const e = document.createElement(tag); if (css) e.style.cssText = css; if (text !== undefined) e.textContent = text; return e; }
+function icon(name, css) { const i = el("i", css); i.className = "ti " + name; i.setAttribute("aria-hidden", "true"); return i; }
+function svg(tag, attrs) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+function timeline(stages) {
+  const total = stages.reduce((s, x) => s + (x.nights || 0), 0) || 1;
+  const W = 600, H = 52, gap = 4;
+  const root = svg("svg", {viewBox: "0 0 " + W + " " + H, width: "100%", role: "img"});
+  const title = svg("title", {});
+  title.textContent = stages.map((s) => s.title + " " + s.nights).join(", ");
+  root.appendChild(title);
+  let x = 0;
+  for (const s of stages) {
+    if (!rampOf.has(s.title)) rampOf.set(s.title, ramps[rampOf.size % ramps.length]);
+    const w = Math.max(W * (s.nights || 0) / total - gap, 24);
+    const g = svg("g", {class: rampOf.get(s.title)});
+    g.appendChild(svg("rect", {x: x, y: 0, width: w, height: H, rx: 4}));
+    const nightsText = s.nights + " " + (s.nights === 1 ? L.night : L.nights);
+    if (w >= 90) {
+      const t1 = svg("text", {x: x + w / 2, y: 22, "text-anchor": "middle", class: "th"});
+      t1.textContent = s.title;
+      const t2 = svg("text", {x: x + w / 2, y: 40, "text-anchor": "middle", class: "ts"});
+      t2.textContent = nightsText;
+      g.append(t1, t2);
+    } else {
+      const t = svg("text", {x: x + w / 2, y: 31, "text-anchor": "middle", class: "ts"});
+      t.textContent = String(s.nights);
+      g.appendChild(t);
+    }
+    root.appendChild(g);
+    x += w + gap;
+  }
+  return root;
+}
+const box = document.getElementById("its");
+for (const o of DATA.options) {
+  const card = el("div", "display:flex; flex-direction:column; gap:12px; padding:1rem 1.25rem; border-radius:12px; background:var(--surface-2); border:" + (o.recommended ? "2px solid var(--border-accent)" : "0.5px solid var(--border)"));
+  const head = el("div", "display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap");
+  const names = el("div", "min-width:0");
+  names.appendChild(el("div", "font-size:16px; font-weight:500; color:var(--text-primary)", o.title));
+  if (o.sub) names.appendChild(el("div", "font-size:13px; color:var(--text-secondary)", o.sub));
+  head.appendChild(names);
+  if (o.recommended) head.appendChild(el("span", "font-size:12px; padding:2px 10px; border-radius:var(--radius); background:var(--bg-accent); color:var(--text-accent)", L.pick));
+  card.appendChild(head);
+  card.appendChild(timeline(o.stages || []));
+  const legs = el("div", "display:flex; flex-wrap:wrap; gap:6px 16px");
+  for (const g of o.legs || []) {
+    const row = el("span", "display:inline-flex; gap:6px; align-items:center; font-size:13px; color:var(--text-secondary)");
+    row.appendChild(icon(legIcon[g.mode] || "ti-arrow-right", "font-size:16px; color:var(--text-muted)"));
+    row.appendChild(el("span", "", g.text));
+    legs.appendChild(row);
+  }
+  card.appendChild(legs);
+  if (o.why) card.appendChild(el("div", "font-size:13px; color:var(--text-secondary); line-height:1.5", o.why));
+  const foot = el("div", "display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding-top:8px; border-top:0.5px solid var(--border)");
+  const money = el("div", "display:flex; align-items:baseline; gap:8px");
+  if (o.budget) { money.appendChild(el("span", "font-size:12px; color:var(--text-muted)", L.total)); money.appendChild(el("span", "font-size:18px; font-weight:500; color:var(--text-primary)", o.budget)); }
+  foot.appendChild(money);
+  const b = el("button", "font-size:13px", L.choose + " ↗");
+  b.type = "button";
+  b.addEventListener("click", () => sendPrompt(DATA.prompt + " " + o.title));
+  foot.appendChild(b);
+  card.appendChild(foot);
+  box.appendChild(card);
+}
+</script>

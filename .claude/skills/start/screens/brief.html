@@ -1,0 +1,103 @@
+<form class="elicit">
+  <div class="elicit-header">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M11.586 2a1.5 1.5 0 0 1 1.06.44l2.914 2.914a1.5 1.5 0 0 1 .44 1.06V16.5a1.5 1.5 0 0 1-1.5 1.5h-9a1.5 1.5 0 0 1-1.492-1.347L4 16.5v-13A1.5 1.5 0 0 1 5.5 2zM5.5 3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h-2.5A1.5 1.5 0 0 1 11 5.5V3zm7.04 10.304a.5.5 0 0 1 .92.392c-.295.69-.871 1.304-1.66 1.304-.487 0-.892-.234-1.2-.574-.309.34-.713.574-1.2.574-.486 0-.892-.233-1.2-.574-.31.34-.714.574-1.2.574a.5.5 0 0 1 0-1c.212 0 .52-.18.74-.696l.034-.067a.5.5 0 0 1 .886.067c.221.516.528.696.74.696.213 0 .52-.18.74-.696l.035-.067a.5.5 0 0 1 .885.067c.22.516.527.696.74.696s.519-.18.74-.696m0-4a.5.5 0 0 1 .92.392c-.295.69-.871 1.304-1.66 1.304-.487 0-.892-.234-1.2-.574-.309.34-.713.574-1.2.574-.486 0-.892-.233-1.2-.574-.31.34-.714.574-1.2.574a.5.5 0 0 1 0-1c.212 0 .52-.18.74-.696l.034-.067a.5.5 0 0 1 .886.067c.221.516.528.696.74.696.213 0 .52-.18.74-.696l.035-.067a.5.5 0 0 1 .885.067c.22.516.527.696.74.696s.519-.18.74-.696M12 5.5a.5.5 0 0 0 .5.5h2.293L12 3.207z"/></svg>
+    <span>Trip details</span>
+  </div>
+  <div class="elicit-body">
+    <div class="elicit-group">
+      <label class="elicit-question">Who's going on this trip?</label>
+      <div class="elicit-pills" data-name="who" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Solo" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-user" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Solo</span><br><span style="font-size:11px; color:var(--text-muted)">Just me</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Couple" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-heart" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Couple</span><br><span style="font-size:11px; color:var(--text-muted)">The two of us</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Friends" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-users" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Friends</span><br><span style="font-size:11px; color:var(--text-muted)">A group of us</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Family" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-users-group" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Family</span><br><span style="font-size:11px; color:var(--text-muted)">With children</span></span></button>
+      </div>
+      <textarea class="elicit-textarea" data-name="travelers" rows="1" placeholder="How many, and the children's ages"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Where do you leave from, and which passports do you hold?</label>
+      <textarea class="elicit-textarea" data-name="home" rows="1" placeholder="Paris, French passports"></textarea>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Do you know where you'd like to go?</label>
+      <div class="elicit-pills" data-name="destination" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Suggest places for me">Suggest places for me</button>
+        <button type="button" class="elicit-pill" data-value="I know where" data-other>I know where</button>
+      </div>
+      <input type="text" class="elicit-other" data-for="destination" placeholder="Japan, or Lisbon and Porto" hidden>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">When would you leave and come back?</label>
+      <div style="display:flex; flex-wrap:wrap; gap:12px">
+        <input type="date" class="elicit-date" data-name="leave">
+        <input type="date" class="elicit-date" data-name="come_back">
+      </div>
+      <div class="elicit-pills" data-name="dates" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Fixed dates">Fixed dates</button>
+        <button type="button" class="elicit-pill" data-value="A few days either way">A few days either way</button>
+        <button type="button" class="elicit-pill" data-value="Only the month is set">Only the month is set</button>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">What total budget for everyone, in US dollars?</label>
+      <div class="elicit-pills" data-name="budget" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Under 2,000" data-accent="warning">Under 2,000</button>
+        <button type="button" class="elicit-pill" data-value="2,000 to 4,000" data-accent="warning">2,000 to 4,000</button>
+        <button type="button" class="elicit-pill" data-value="4,000 to 7,000" data-accent="warning">4,000 to 7,000</button>
+        <button type="button" class="elicit-pill" data-value="7,000 to 10,000" data-accent="warning">7,000 to 10,000</button>
+        <button type="button" class="elicit-pill" data-value="An exact amount" data-other>An exact amount</button>
+      </div>
+      <input type="text" class="elicit-other" data-for="budget" placeholder="6,000, flights included" hidden>
+      <div class="elicit-pills" data-name="flights" data-multi="false">
+        <button type="button" class="elicit-pill" data-value="Flights included">Flights included</button>
+        <button type="button" class="elicit-pill" data-value="Flights apart">Flights apart</button>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">What should the trip feel like?</label>
+      <div class="elicit-pills" data-name="mood" data-multi="true">
+        <button type="button" class="elicit-pill" data-value="Beach and sea" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-beach" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Beach and sea</span></button>
+        <button type="button" class="elicit-pill" data-value="Mountains and nature" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-mountain" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Mountains and nature</span></button>
+        <button type="button" class="elicit-pill" data-value="Cities" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-building-skyscraper" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Cities</span></button>
+        <button type="button" class="elicit-pill" data-value="Culture and history" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-building-castle" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Culture and history</span></button>
+        <button type="button" class="elicit-pill" data-value="Food" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-tools-kitchen-2" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Food</span></button>
+        <button type="button" class="elicit-pill" data-value="Nightlife" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-music" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Nightlife</span></button>
+        <button type="button" class="elicit-pill" data-value="Rest and wellness" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-leaf" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Rest and wellness</span></button>
+        <button type="button" class="elicit-pill" data-value="Adventure" style="border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:center; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-compass" style="font-size:20px" aria-hidden="true"></i><span style="font-size:13px; font-weight:500">Adventure</span></button>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">What pace suits you?</label>
+      <div style="display:flex; align-items:center; gap:12px">
+        <span style="font-size:13px; color:var(--text-secondary)">Few places, long stays</span>
+        <input type="range" data-name="pace" min="1" max="5" step="1" value="2" style="flex:1">
+        <span style="font-size:13px; color:var(--text-secondary)">Many places</span>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Where do you like to sleep?</label>
+      <div class="elicit-pills" data-name="lodging" data-multi="true">
+        <button type="button" class="elicit-pill" data-value="Boutique hotel" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-building" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Boutique hotel</span><br><span style="font-size:11px; color:var(--text-muted)">Small, with character</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Resort" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-pool" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Resort</span><br><span style="font-size:11px; color:var(--text-muted)">Pool, spa, everything there</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Villa or house" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-home" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Villa or house</span><br><span style="font-size:11px; color:var(--text-muted)">A place of our own</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Apartment" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-key" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Apartment</span><br><span style="font-size:11px; color:var(--text-muted)">Live like a local</span></span></button>
+        <button type="button" class="elicit-pill" data-value="Simple and cheap" style="border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; text-align:left; min-width:150px; box-shadow:0 1px 2px rgba(0,0,0,0.04)"><i class="ti ti-backpack" style="font-size:20px" aria-hidden="true"></i><span><span style="font-size:13px; font-weight:500">Simple and cheap</span><br><span style="font-size:11px; color:var(--text-muted)">Budget goes elsewhere</span></span></button>
+      </div>
+      <div class="elicit-pills" data-name="matters" data-multi="true">
+        <button type="button" class="elicit-pill" data-value="A view">A view</button>
+        <button type="button" class="elicit-pill" data-value="Calm">Calm</button>
+        <button type="button" class="elicit-pill" data-value="A pool">A pool</button>
+        <button type="button" class="elicit-pill" data-value="Central">Central</button>
+        <button type="button" class="elicit-pill" data-value="Design">Design</button>
+      </div>
+    </div>
+    <div class="elicit-group">
+      <label class="elicit-question">Anything else I should know?</label>
+      <textarea class="elicit-textarea" data-name="notes" placeholder="Diet, mobility, a must-see, something to avoid, the reason for this trip"></textarea>
+    </div>
+  </div>
+  <div class="elicit-footer">
+    <button type="button" class="elicit-skip">Skip</button>
+    <button type="button" class="elicit-submit">Continue</button>
+  </div>
+</form>

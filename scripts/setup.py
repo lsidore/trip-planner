@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mcp  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NEEDED = "SETUP_NEEDED: run the guided setup (see CLAUDE.md › First launch) before anything else."
+NEEDED = "SETUP_NEEDED: run the guided setup (see CLAUDE.md › First launch, with the start skill) before anything else."
 GROUPS = ("keyless", "keyed", "connector", "browser")
 WSL_NOTE = "Run this inside your WSL (Linux) terminal."
 NEW_TERMINAL = "Then open a new terminal window, so the new command is found."
@@ -344,7 +344,7 @@ def cmd_hook(args, root):
     if not st:
         print(NEEDED)
     else:
-        print(f"Setup done {st.get('date', 'unknown')}. Active trip: {active_slug(root)}.")
+        print(f"Setup done {st.get('date', 'unknown')}. Active trip: {active_slug(root)}. Load the start skill.")
     return 0
 
 

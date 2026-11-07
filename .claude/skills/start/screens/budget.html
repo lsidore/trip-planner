@@ -1,0 +1,80 @@
+<h2 class="sr-only">Trip budget against the cap, with a slider for spending on site</h2>
+<div id="metrics" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:12px; padding:0.5rem 0 1rem"></div>
+<div id="gauge" style="height:10px; border-radius:var(--radius); background:var(--surface-1); overflow:hidden; margin:0 0 1.25rem"><div id="fill" style="height:100%; width:0"></div></div>
+<div id="lines" style="display:flex; flex-direction:column; gap:10px; margin:0 0 1.25rem"></div>
+<div id="tune" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 1rem"></div>
+<div id="note" style="font-size:12px; color:var(--text-muted); margin:0 0 1rem"></div>
+<div id="acts" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; padding:0 0 1rem"></div>
+<script>
+const DATA = {"currency": "USD", "locale": "en-US", "cap": 6000, "labels": {"total": "Total", "cap": "Cap", "margin": "Margin", "over": "Over the cap", "tune": "Spending on site", "apply": "Use this level"}, "lines": [{"icon": "ti-bed", "label": "Stays, 9 nights", "amount": 2100}, {"icon": "ti-tools-kitchen-2", "label": "Meals, drinks, outings", "amount": 1794, "flex": true}, {"icon": "ti-plane", "label": "Flights, 5 legs", "amount": 1651}, {"icon": "ti-car", "label": "Ground transfers", "amount": 332}, {"icon": "ti-file-certificate", "label": "Insurance, eSIM, entry", "amount": 252}], "note": "Default picks of the page. Nothing booked. Prices checked 2026-11-07.", "tunePrompt": "Set the spending on site to {pct}% (total about {total})", "actions": [{"label": "Looks good", "prompt": "The budget looks good, let's go on"}, {"label": "Find savings", "prompt": "Find ways to bring the budget under the cap"}]};
+const L = DATA.labels;
+const money = new Intl.NumberFormat(DATA.locale || undefined, {style: "currency", currency: DATA.currency, maximumFractionDigits: 0});
+function el(tag, css, text) { const e = document.createElement(tag); if (css) e.style.cssText = css; if (text !== undefined) e.textContent = text; return e; }
+function icon(name, css) { const i = el("i", css); i.className = "ti " + name; i.setAttribute("aria-hidden", "true"); return i; }
+let pct = 100;
+const hasFlex = DATA.lines.some((l) => l.flex);
+const amount = (l) => Math.round(l.flex ? l.amount * pct / 100 : l.amount);
+const metrics = {};
+for (const k of ["total", "cap", "margin"]) {
+  const card = el("div", "background:var(--surface-1); border-radius:var(--radius); padding:1rem");
+  card.appendChild(el("div", "font-size:13px; color:var(--text-secondary)", L[k]));
+  metrics[k] = el("div", "font-size:24px; font-weight:500; color:var(--text-primary)");
+  card.appendChild(metrics[k]);
+  document.getElementById("metrics").appendChild(card);
+}
+const rows = [];
+const max = Math.max(...DATA.lines.map((l) => l.amount * (l.flex ? 1.5 : 1)), 1);
+for (const l of DATA.lines) {
+  const row = el("div", "display:grid; grid-template-columns:20px minmax(0, 1fr) auto; gap:4px 10px; align-items:center");
+  row.appendChild(icon(l.icon || "ti-point", "font-size:18px; color:var(--text-muted)"));
+  row.appendChild(el("span", "font-size:14px; color:var(--text-primary); min-width:0", l.label));
+  const val = el("span", "font-size:14px; font-weight:500; color:var(--text-primary); text-align:right");
+  row.appendChild(val);
+  const track = el("div", "grid-column:2 / 4; height:6px; border-radius:var(--radius); background:var(--surface-1); overflow:hidden");
+  const bar = el("div", "height:100%; background:var(--text-accent)");
+  track.appendChild(bar);
+  row.appendChild(track);
+  rows.push({l, val, bar});
+  document.getElementById("lines").appendChild(row);
+}
+let apply = null;
+const pctOut = el("span", "font-size:14px; font-weight:500; min-width:48px; text-align:right");
+if (hasFlex) {
+  const tune = document.getElementById("tune");
+  tune.appendChild(el("label", "font-size:14px; color:var(--text-secondary)", L.tune));
+  const r = el("input", "flex:1; min-width:140px");
+  r.type = "range"; r.min = "50"; r.max = "150"; r.step = "5"; r.value = "100";
+  r.addEventListener("input", () => { pct = Number(r.value); render(); });
+  tune.appendChild(r);
+  tune.appendChild(pctOut);
+  apply = el("button", "font-size:13px", L.apply + " ↗");
+  apply.type = "button";
+  apply.hidden = true;
+  apply.addEventListener("click", () => sendPrompt(DATA.tunePrompt.replace("{pct}", String(pct)).replace("{total}", money.format(total()))));
+  tune.appendChild(apply);
+}
+const total = () => DATA.lines.reduce((s, l) => s + amount(l), 0);
+function render() {
+  const t = total();
+  const m = DATA.cap - t;
+  metrics.total.textContent = money.format(t);
+  metrics.cap.textContent = money.format(DATA.cap);
+  metrics.margin.textContent = (m < 0 ? "−" : "") + money.format(Math.abs(m));
+  metrics.margin.style.color = m < 0 ? "var(--text-danger)" : "var(--text-success)";
+  metrics.margin.title = m < 0 ? L.over : "";
+  const fill = document.getElementById("fill");
+  fill.style.width = Math.min(100, Math.round(t / DATA.cap * 100)) + "%";
+  fill.style.background = m < 0 ? "var(--text-danger)" : "var(--text-accent)";
+  for (const r of rows) { r.val.textContent = money.format(amount(r.l)); r.bar.style.width = Math.round(amount(r.l) / max * 100) + "%"; }
+  pctOut.textContent = pct + "%";
+  if (apply) apply.hidden = pct === 100;
+}
+document.getElementById("note").textContent = DATA.note || "";
+for (const a of DATA.actions || []) {
+  const b = el("button", "font-size:13px", a.label + " ↗");
+  b.type = "button";
+  b.addEventListener("click", () => sendPrompt(a.prompt));
+  document.getElementById("acts").appendChild(b);
+}
+render();
+</script>

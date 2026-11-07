@@ -45,10 +45,15 @@ claude
 
 The first time, `claude` asks you to sign in with your Claude account. Then it asks whether you trust the
 `trip-planner` folder: choose yes (this lets it use the tool's settings and its free search tools; if it also asks
-about the project's MCP servers, accept them; if it asks whether Claude may use your browser, answer yes). Claude then waits for you to write first: type anything, for example
-`Plan me a trip`, and press Enter.
+about the project's MCP servers, accept them; if it asks whether Claude may use your browser, answer yes). Claude
+then waits for you to write first: type anything, for example `Plan me a trip` or `/start`, and press Enter.
 
 On a Mac with nothing installed yet, the first time you type `git clone` a pop-up offers to install the "Command Line Tools". Click **Install**, then **Agree**, and wait a few minutes. That one install gives you `git` and `python3` too. When it ends, type the line again.
+
+**Prefer clicking to typing?** Open the same `trip-planner` folder in the Code tab of the
+[Claude desktop app](https://claude.com/download): there, every question and every choice appears as a small screen
+you click (cards, dates, a budget slider), right in the conversation. In the terminal, the same choices come as
+buttons you pick with the arrow keys.
 
 ## First launch
 
@@ -60,7 +65,8 @@ After your first message, Claude notices that nothing is set up yet and guides y
    yourself. After an install it asks you to quit Claude Code and start it again from a new terminal window
    (`claude --continue` picks the conversation up where it was), so that the new tools are found.
 3. It tests the free tools (flight search, hotel prices, weather, exchange rates...).
-4. It asks three quick questions, and "not now" is always a fine answer: the tool works without any of them.
+4. It asks three quick questions on one screen you click (buttons in the terminal), and "not now" is always a fine
+   answer: the tool works without any of them.
    - **Services with a key**: one list, you pick the ones you want (or none). For each one you pick, it gives the
      sign-up link and you paste the key in the chat.
    - **Claude account connectors** (Booking.com, Expedia, Tripadvisor...): it tells you which ones are already on and
@@ -79,9 +85,12 @@ When the setup is over, type this sentence (any language works, Claude answers i
 Plan me a trip
 ```
 
-Claude then asks about who travels, when, the budget, what you enjoy and what you do not. Tell it in your own words.
-From there it proposes destinations if you have none, then itineraries, then searches lodgings, flights, activities and
-restaurants. It shows photos first and text second. When there is something to choose, it opens the trip page.
+Claude shows one screen to fill in with a few clicks: who travels, from where, when, the budget, what you enjoy and
+how you like to sleep. From there it proposes destinations if you have none (cards to compare), then itineraries
+(drawn as timelines), then searches lodgings, flights, activities and restaurants. It shows photos first, then the
+options as cards: you click the ones you like. The budget is a live screen too, with a slider for what you spend on
+the spot. Between two steps, a "what next" screen lets you click the next step. You can always type your answer
+instead, in your own words.
 
 You can ask for anything at any time ("cheaper hotels in the second city", "move one day", "show me the page").
 The `/` commands (type `/` to see the list) are only shortcuts.

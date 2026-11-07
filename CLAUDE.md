@@ -14,6 +14,10 @@ travelers, their mood, their pace and their budget?
 
 ## At the start of every session
 
+Load the `start` skill (`.claude/skills/start/`) and follow it: it runs the two steps below in order and asks every
+choice through a clickable screen (widgets in the Claude desktop app, buttons in the terminal), so the person never
+has to type a list of answers or know a command.
+
 1. **Setup.** If the session-start message says `SETUP_NEEDED`, or `.setup/state.json` does not exist, run
    First launch before anything else (it works even if the hook did not run).
 2. **Trips.** Otherwise the hook says `Setup done <date>. Active trip: <slug>.`: go to Trips.
@@ -21,7 +25,8 @@ travelers, their mood, their pace and their budget?
 ## First launch
 
 Guided setup, as simple as possible: short messages, automatic checks, and only three questions (keys, connectors,
-Chrome), each with "not now" as a fine answer. It can be run again at any time (`/setup`, or "redo the setup").
+Chrome) asked together on the `start` skill's setup screen, each with "not now" as a fine answer. It can be run
+again at any time (`/setup`, or "redo the setup").
 
 1. Say what will happen in two lines: automatic checks, then three quick questions; nothing to pay; about 5 minutes.
 2. `python3 -I scripts/setup.py status` checks Node.js, uv, Python 3.9+, Pillow and Claude Code and prints, for each
@@ -40,7 +45,7 @@ Chrome), each with "not now" as a fine answer. It can be run again at any time (
    many answer; a failing one never blocks (you use the next tool in Tool routing).
 4. **Services with a key: one question.** `python3 -I scripts/setup.py services` lists them (group `keyed`). Show them
    in one short list, one line each: what it adds to the trip and what is free. Then ask once which ones to turn on
-   (a multiple-choice question when the AskUserQuestion tool is available), with "None for now" as the first answer:
+   (the `start` skill's setup screen, or a multiple-choice question), with "None for now" as the first answer:
    the tool works without them, and they can say "add my SerpApi key" any time later. Then, only for each one picked:
    the sign-up link and steps, and two ways to give the key:
    - paste it in the chat (say that it stays in this conversation's history), then
@@ -101,8 +106,8 @@ A missing service never breaks anything: every need has a free path (Tool routin
 
 The order of a new trip. Show what you did after each step and let the person steer.
 
-1. **Brief**, in small groups of questions (AskUserQuestion when the answers are choices), written to
-   `trips/<slug>/profile.md` as you go:
+1. **Brief**, on the `start` skill's brief screen (buttons in small groups where screens are not available),
+   written to `trips/<slug>/profile.md` as you go:
    - travelers: how many, ages, home city and airport of each, passport nationalities;
    - dates: fixed or flexible, length;
    - budget: total amount, what it covers (flights included or not), home currency;
@@ -152,6 +157,9 @@ The order of a new trip. Show what you did after each step and let the person st
 
 ## Showing options
 
+- **Choices go through screens.** Every decision (destination, itinerary, lodgings, flights, outings, budget, the next
+  step) is shown with the `start` skill's screens: cards to click, a short-list to confirm, a live budget. The
+  person can still answer in their own words.
 - **Photos before text.** For a lodging, a place or a destination: the photos first, then only the name, the price,
   the rating and one line; the rest when asked.
 - **Quick proposals in the chat**: the first three photos and a link per option, no heavy download. Write the options
@@ -290,6 +298,7 @@ resolves conflicts and runs the tests. `trips/` is never touched (git ignores it
 
 | Command | What it does |
 |---|---|
+| `/start` | the guided trip with clickable screens: setup, brief, choices, budget, what next |
 | `/setup` | guided setup (First launch), again at any time |
 | `/trip` | start a new trip or resume one, then the brief |
 | `/stays` | lodgings of one stage or all stages (`stay-finder`) |

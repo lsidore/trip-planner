@@ -1,0 +1,23 @@
+<h2 class="sr-only">Choose what to do next</h2>
+<div id="hub" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:12px; padding:0.5rem 0"></div>
+<script>
+const DATA = {"labels": {"done": "Done", "next": "Next", "later": "Later"}, "cards": [{"icon": "ti-plane-departure", "title": "Start a new trip", "sub": "A few clicks, then ideas", "status": "next", "prompt": "Start a new trip"}, {"icon": "ti-map-2", "title": "See an example", "sub": "Lisbon, Comporta and Porto, 9 nights", "status": "", "prompt": "Show me the example trip"}, {"icon": "ti-settings", "title": "Redo the setup", "sub": "Keys, connectors, Chrome", "status": "", "prompt": "Redo the setup"}]};
+const box = document.getElementById("hub");
+const tone = {done: ["var(--bg-success)", "var(--text-success)"], next: ["var(--bg-accent)", "var(--text-accent)"], later: ["var(--surface-1)", "var(--text-secondary)"]};
+function el(tag, css, text) { const e = document.createElement(tag); if (css) e.style.cssText = css; if (text !== undefined) e.textContent = text; return e; }
+for (const c of DATA.cards) {
+  const b = el("button", "display:flex; flex-direction:column; align-items:flex-start; gap:8px; text-align:left; height:auto; min-height:112px; width:100%; padding:1rem 1.25rem; border-radius:12px; background:var(--surface-2); border:" + (c.status === "next" ? "2px solid var(--border-accent)" : "0.5px solid var(--border)"));
+  b.type = "button";
+  const top = el("div", "display:flex; justify-content:space-between; align-items:center; width:100%");
+  const icon = el("i", "font-size:20px; color:var(--text-secondary)");
+  icon.className = "ti " + (c.icon || "ti-arrow-right");
+  icon.setAttribute("aria-hidden", "true");
+  top.appendChild(icon);
+  if (tone[c.status]) top.appendChild(el("span", "font-size:12px; padding:2px 10px; border-radius:var(--radius); background:" + tone[c.status][0] + "; color:" + tone[c.status][1], DATA.labels[c.status] || c.status));
+  b.appendChild(top);
+  b.appendChild(el("span", "font-size:15px; font-weight:500; color:var(--text-primary)", c.title + " ↗"));
+  if (c.sub) b.appendChild(el("span", "font-size:13px; color:var(--text-secondary); line-height:1.5", c.sub));
+  b.addEventListener("click", () => sendPrompt(c.prompt || c.title));
+  box.appendChild(b);
+}
+</script>
