@@ -1,0 +1,126 @@
+[
+  {
+    "_example": true,
+    "id": "porto-01",
+    "etape": "porto",
+    "nom": "Casa da Ribeira Riverside Hotel",
+    "plateforme": "Booking.com",
+    "url": "https://www.example.com/sample/porto-01",
+    "zone": "Ribeira",
+    "lat": 41.1406,
+    "lng": -8.6112,
+    "type": "riverside hotel",
+    "style": "converted port warehouse",
+    "vue": "Douro river and the iron bridge",
+    "piscine": false,
+    "prix_total_home": 660,
+    "prix_nuit_home": 220,
+    "nuits": 3,
+    "checkin": "2027-06-21",
+    "checkout": "2027-06-24",
+    "note": "9.0/10",
+    "nb_avis": 730,
+    "points_forts": [
+      "River-view rooms",
+      "Rooftop bar",
+      "Mandatory gala dinner on São João night (23 June)"
+    ],
+    "vigilance": [
+      "Fireworks crowd outside until 01:00",
+      "Gala dinner is extra"
+    ],
+    "acces": "Metro line E from the airport, then 10 min walk",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cais_da_Ribeira_in_Porto_%281%29.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cais_da_Ribeira_in_Porto_%281%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dom_Luis_I_bridge_from_Jardim_do_Morro_%281%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/99/View_of_Ribeira_from_Cais_de_Gaia%2C_20250605_1628_9890.jpg"
+    ],
+    "top3": true,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/porto-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "porto-02",
+    "etape": "porto",
+    "nom": "Quinta Foz Boutique Guesthouse",
+    "plateforme": "Booking.com",
+    "url": "https://www.example.com/sample/porto-02",
+    "zone": "Foz do Douro",
+    "lat": 41.1519,
+    "lng": -8.6745,
+    "type": "guesthouse",
+    "style": "seaside villa with garden",
+    "vue": "garden and the Atlantic in the distance",
+    "piscine": false,
+    "prix_total_home": 510,
+    "prix_nuit_home": 170,
+    "nuits": 3,
+    "checkin": "2027-06-21",
+    "checkout": "2027-06-24",
+    "note": "9.4/10",
+    "nb_avis": 260,
+    "points_forts": [
+      "Quiet seaside neighbourhood",
+      "Home-made breakfast"
+    ],
+    "vigilance": [
+      "Tram or taxi to the centre, 20 min"
+    ],
+    "acces": "Taxi from the airport, 25 min",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cais_da_Ribeira_in_Porto_%281%29.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cais_da_Ribeira_in_Porto_%281%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dom_Luis_I_bridge_from_Jardim_do_Morro_%281%29.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/porto-02 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "porto-03",
+    "etape": "porto",
+    "nom": "Loft Miragaia",
+    "plateforme": "Airbnb",
+    "url": "https://www.example.com/sample/porto-03",
+    "zone": "Miragaia",
+    "lat": 41.1448,
+    "lng": -8.6226,
+    "type": "loft",
+    "style": "industrial loft with exposed granite",
+    "vue": "river between two rooftops",
+    "piscine": false,
+    "prix_total_home": 390,
+    "prix_nuit_home": 130,
+    "nuits": 3,
+    "checkin": "2027-06-21",
+    "checkout": "2027-06-24",
+    "note": "4.85/5",
+    "nb_avis": 95,
+    "points_forts": [
+      "Washing machine",
+      "Short walk to the riverbank"
+    ],
+    "vigilance": [
+      "Steep street",
+      "Light sleepers: bar below until 02:00"
+    ],
+    "acces": "Taxi from the airport, 25 min",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dom_Luis_I_bridge_from_Jardim_do_Morro_%281%29.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dom_Luis_I_bridge_from_Jardim_do_Morro_%281%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/99/View_of_Ribeira_from_Cais_de_Gaia%2C_20250605_1628_9890.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/porto-03 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  }
+]

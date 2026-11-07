@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="%%LANG%%" data-trip="%%SLUG%%">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>%%TITLE%%</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600&family=Inter:wght@400;500;600;700&display=swap">
+<style>%%APPCSS%%</style>
+
+<a class="sauter" href="#ecran" data-t="ui_skip">Go to the step</a>
+
+<header class="tete">
+  <div class="tete-in">
+    <p class="marque">%%TITLE%%</p>
+    <nav class="prog" data-t-aria="ui_steps_aria" aria-label="Steps of the trip">
+      <ol class="points" id="points"></ol>
+      <span class="prog-t" id="prog-t"></span>
+    </nav>
+    <div class="outils">
+      <span class="sync" id="sync"><i></i><span data-t="ui_sync_local">On this device</span></span>
+      <div class="mode" role="group" data-t-aria="ui_display_aria" aria-label="Display">
+        <button type="button" id="mode-simple" aria-pressed="true" data-t="ui_mode_simple">Simple</button>
+        <button type="button" id="mode-detail" aria-pressed="false" data-t="ui_mode_detail">Detailed</button>
+      </div>
+    </div>
+    <button type="button" class="pastille" id="pastille" aria-haspopup="dialog" data-t-aria="ui_total_aria_none" aria-label="Open the trip's detail">
+      <span class="p-txt"><span class="p-tot" id="p-tot">—</span><span class="p-sous" id="p-sous"></span></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="page">
+  <div class="alertes" id="alertes" role="status" aria-live="polite" hidden></div>
+  <main class="principal">
+    <div class="question" id="question">
+      <p class="q-sur" id="q-sur"></p>
+      <h1 id="q-titre" tabindex="-1" data-t="ui_loading">Loading the trip…</h1>
+      <p class="q-sous" id="q-sous" hidden></p>
+      <div class="sous-etapes" id="sous-etapes" hidden></div>
+    </div>
+    <section class="ecran" id="ecran" aria-labelledby="q-titre" tabindex="-1"></section>
+  </main>
+</div>
+
+<nav class="pied" data-t-aria="ui_footer_aria" aria-label="Move through the trip">
+  <div class="pied-in">
+    <button type="button" class="btn-retour" id="retour" data-t-aria="ui_back" aria-label="Back"><span aria-hidden="true">←</span><span class="lib-retour" data-t="ui_back">Back</span></button>
+    <button type="button" class="btn-suivant" id="suivant"><span data-t="ui_next">Next:</span> <span id="suivant-lib"></span><span aria-hidden="true"> →</span></button>
+  </div>
+</nav>
+
+<dialog class="panneau" id="panneau" aria-labelledby="pan-titre">
+  <div class="pan-tete"><h2 id="pan-titre"></h2><button type="button" class="pan-x" data-t-aria="ui_close" aria-label="Close">✕</button></div>
+  <div class="pan-corps" id="pan-corps"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+%%APPJS%%
+</html>

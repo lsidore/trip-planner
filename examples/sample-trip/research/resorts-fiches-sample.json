@@ -1,0 +1,290 @@
+[
+  {
+    "_example": true,
+    "id": "lisbon-01",
+    "nom": "Casa Miradouro Boutique Hotel",
+    "pourquoi": "A small hotel on a quiet Alfama lane; the terrace is the reason to stay.",
+    "chambre_conseillee": "Top-floor double with terrace access",
+    "vue_depuis_chambre": "river and rooftops",
+    "public": "adults, slow mornings",
+    "prix": {
+      "total_home": 600,
+      "nuit_home": 200,
+      "plateforme": "Booking.com",
+      "annulation": "free cancellation until 7 days before",
+      "paiement": "pay at the hotel",
+      "verifie": "2026-11-07",
+      "dispo": "available for the dates (EXAMPLE)",
+      "detail": "3 nights, taxes and city tax included in the displayed price (EXAMPLE)",
+      "url": "https://www.example.com/sample/price",
+      "autres": [
+        {
+          "site": "Hotel website",
+          "total_home": 640,
+          "annulation": "free cancellation until 3 days before",
+          "detail": "breakfast included"
+        }
+      ]
+    },
+    "formules": [
+      {
+        "nom": "Room only",
+        "detail": "no breakfast",
+        "total_home": 600
+      },
+      {
+        "nom": "Bed and breakfast",
+        "detail": "terrace breakfast for two",
+        "total_home": 708
+      }
+    ],
+    "inclus": [
+      "Welcome drink",
+      "Wi-Fi",
+      "Luggage storage"
+    ],
+    "non_inclus": [
+      "Breakfast (room-only rate)",
+      "City tax"
+    ],
+    "gala": null,
+    "equipements": [
+      "Air conditioning",
+      "Rooftop terrace",
+      "Espresso machine"
+    ],
+    "restaurants": [
+      "Terrace breakfast room"
+    ],
+    "avis": {
+      "sources": [
+        "Booking.com (EXAMPLE)"
+      ],
+      "aiment": [
+        "Terrace views",
+        "Helpful staff"
+      ],
+      "reprochent": [
+        "Stairs",
+        "Small bathrooms"
+      ],
+      "citations": [
+        "\"We watched the sunset over the river every evening.\" (invented)"
+      ],
+      "alerte": null
+    },
+    "acces": "Taxi 25 min from LIS; the last 150 m are on foot.",
+    "cout_reel": {
+      "chambre": 600,
+      "petits_dej": 108,
+      "dejeuners": 0,
+      "diners": 285,
+      "verres": 64,
+      "transferts": 56,
+      "spa": 0,
+      "gala": 0,
+      "hypotheses": "6 breakfasts at 18, 3 dinners at 95, 4 drinks at 16, 2 taxis at 28 (all EXAMPLE estimates)"
+    },
+    "note_qualite": 4.5,
+    "note_qualite_prix": 4.0,
+    "verdict": "Best value for a first night out in the old town.",
+    "lat": 38.7128,
+    "lng": -9.1306,
+    "sources": [
+      "https://www.example.com/sample/lisbon-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "comporta-01",
+    "nom": "Herdade do Sal Resort",
+    "pourquoi": "Thatched villas between rice fields and pines; the quietest base for the beach days.",
+    "chambre_conseillee": "Villa with plunge pool, north side",
+    "vue_depuis_chambre": "rice paddies, storks at dawn",
+    "public": "slow travelers, no-hurry days",
+    "prix": {
+      "total_home": 840,
+      "nuit_home": 280,
+      "plateforme": "Booking.com",
+      "annulation": "free cancellation until 10 days before",
+      "paiement": "card guarantee, pay on departure",
+      "verifie": "2026-11-07",
+      "dispo": "available for the dates (EXAMPLE)",
+      "detail": "3 nights; the displayed price is '++': add 10% service and 7% VAT on extras (EXAMPLE)",
+      "url": "https://www.example.com/sample/price",
+      "autres": [
+        {
+          "site": "Hotel website",
+          "total_home": 900,
+          "annulation": "free cancellation until 14 days before",
+          "detail": "spa credit of 40 included"
+        }
+      ]
+    },
+    "formules": [
+      {
+        "nom": "Villa, room only",
+        "detail": "no meals",
+        "total_home": 840
+      },
+      {
+        "nom": "Villa, half board",
+        "detail": "dinner at the resort for two",
+        "total_home": 1110
+      }
+    ],
+    "inclus": [
+      "Beach shuttle",
+      "Bicycles",
+      "Wi-Fi"
+    ],
+    "non_inclus": [
+      "Meals",
+      "Spa treatments",
+      "Private transfers"
+    ],
+    "gala": null,
+    "equipements": [
+      "Plunge pool",
+      "Spa",
+      "Bicycles",
+      "Beach shuttle"
+    ],
+    "restaurants": [
+      "Resort restaurant (grill and rice dishes)"
+    ],
+    "avis": {
+      "sources": [
+        "Booking.com (EXAMPLE)",
+        "Tripadvisor (EXAMPLE)"
+      ],
+      "aiment": [
+        "Silence",
+        "Rice-field views",
+        "Spa"
+      ],
+      "reprochent": [
+        "Few restaurants nearby",
+        "Mosquitoes at dusk"
+      ],
+      "citations": [
+        "\"Nothing to do and we loved it.\" (invented)"
+      ],
+      "alerte": "Public ferry Setúbal–Tróia: last departure 20:30 (invented timetable)"
+    },
+    "acces": "Rental car from Lisbon, 1 h 30 including a stop for the Setúbal–Tróia ferry; last public ferry at 20:30.",
+    "cout_reel": {
+      "chambre": 840,
+      "petits_dej": 120,
+      "dejeuners": 0,
+      "diners": 330,
+      "verres": 84,
+      "transferts": 120,
+      "spa": 170,
+      "gala": 0,
+      "hypotheses": "6 breakfasts at 20, 3 dinners, 6 drinks at 14, ferry plus taxi, 2 spa treatments at 85 (EXAMPLE estimates)"
+    },
+    "note_qualite": 4.8,
+    "note_qualite_prix": 3.8,
+    "verdict": "The splurge of the trip; worth it if you want to do nothing for three days.",
+    "lat": 38.3489,
+    "lng": -8.774,
+    "sources": [
+      "https://www.example.com/sample/comporta-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "porto-01",
+    "nom": "Casa da Ribeira Riverside Hotel",
+    "pourquoi": "A warehouse turned hotel facing the iron bridge; on São João night the fireworks start under the windows.",
+    "chambre_conseillee": "River-view double, 3rd floor",
+    "vue_depuis_chambre": "Douro and the iron bridge",
+    "public": "adults, city weekend",
+    "prix": {
+      "total_home": 660,
+      "nuit_home": 220,
+      "plateforme": "Booking.com",
+      "annulation": "free cancellation until 7 days before",
+      "paiement": "pay at the hotel",
+      "verifie": "2026-11-07",
+      "dispo": "available for the dates (EXAMPLE)",
+      "detail": "3 nights, tax included (EXAMPLE)",
+      "url": "https://www.example.com/sample/price",
+      "autres": [
+        {
+          "site": "Hotel website",
+          "total_home": 690,
+          "annulation": "free cancellation until 3 days before",
+          "detail": "late checkout included"
+        }
+      ]
+    },
+    "formules": [
+      {
+        "nom": "Room only",
+        "detail": "no breakfast",
+        "total_home": 660
+      },
+      {
+        "nom": "Bed and breakfast",
+        "detail": "buffet for two",
+        "total_home": 768
+      }
+    ],
+    "inclus": [
+      "Rooftop bar access",
+      "Wi-Fi"
+    ],
+    "non_inclus": [
+      "Breakfast (room-only rate)",
+      "Gala dinner"
+    ],
+    "gala": "Mandatory gala dinner on 23 June (São João night), 130 per person, drinks excluded (EXAMPLE)",
+    "equipements": [
+      "Rooftop bar",
+      "Air conditioning",
+      "Lift"
+    ],
+    "restaurants": [
+      "Cellar restaurant"
+    ],
+    "avis": {
+      "sources": [
+        "Booking.com (EXAMPLE)"
+      ],
+      "aiment": [
+        "Location on the quay",
+        "Rooftop bar"
+      ],
+      "reprochent": [
+        "Noise on festival nights"
+      ],
+      "citations": [
+        "\"The fireworks over the bridge were unforgettable.\" (invented)"
+      ],
+      "alerte": null
+    },
+    "acces": "Metro line E from OPO then 10 min on foot, or taxi 25 min.",
+    "cout_reel": {
+      "chambre": 660,
+      "petits_dej": 108,
+      "dejeuners": 0,
+      "diners": 185,
+      "verres": 80,
+      "transferts": 60,
+      "spa": 0,
+      "gala": 260,
+      "hypotheses": "6 breakfasts at 18, 2 dinners (100 and 85), 5 drinks at 16, 2 taxis at 30, gala dinner 2 × 130 on São João night, the third evening (all EXAMPLE estimates)"
+    },
+    "note_qualite": 4.4,
+    "note_qualite_prix": 3.9,
+    "verdict": "The view is the point; book early for the São João weekend.",
+    "lat": 41.1406,
+    "lng": -8.6112,
+    "sources": [
+      "https://www.example.com/sample/porto-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ],
+    "gala_pour": "sao-joao"
+  }
+]

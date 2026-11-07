@@ -1,0 +1,116 @@
+{
+  "lisbon-tasca-miradouro": {
+    "_example": true,
+    "prix_couple_home": 85,
+    "compris": [
+      "starter",
+      "two mains",
+      "dessert"
+    ],
+    "pas_compris": [
+      "drinks"
+    ],
+    "duree_min": 120,
+    "depart": "20:00",
+    "moment": "soir",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "vite",
+    "remplace": "diners",
+    "liens": [
+      {
+        "site": "Tasca do Miradouro",
+        "prix_home": 85,
+        "url": "https://www.example.com/sample/book/tasca-do-miradouro",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  },
+  "lisbon-rooftop-tejo": {
+    "_example": true,
+    "prix_couple_home": 38,
+    "compris": [
+      "two drinks"
+    ],
+    "pas_compris": [
+      "food"
+    ],
+    "duree_min": 90,
+    "depart": "18:30",
+    "moment": "coucher",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "sans",
+    "remplace": "verres",
+    "liens": [
+      {
+        "site": "Terraço Tejo",
+        "prix_home": 38,
+        "url": "https://www.example.com/sample/book/terraço-tejo",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null,
+    "prix_estime": true
+  },
+  "lisbon-alfama-walk": {
+    "_example": true,
+    "prix_couple_home": 70,
+    "compris": [
+      "local guide",
+      "coffee"
+    ],
+    "pas_compris": [
+      "lunch"
+    ],
+    "duree_min": 150,
+    "depart": "09:00",
+    "moment": "matin",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "veille",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Example Tours",
+        "prix_home": 70,
+        "url": "https://www.example.com/sample/book/example-tours",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  },
+  "lisbon-azulejo-workshop": {
+    "_example": true,
+    "prix_couple_home": 90,
+    "compris": [
+      "materials",
+      "firing",
+      "shipping of the tile is extra"
+    ],
+    "pas_compris": [
+      "shipping"
+    ],
+    "duree_min": 120,
+    "depart": "14:00",
+    "moment": "apres-midi",
+    "date_fixe": null,
+    "jour_trajet_ok": false,
+    "quand_reserver": "vite",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Studio Booking",
+        "prix_home": 90,
+        "url": "https://www.example.com/sample/book/studio-booking",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "_example": true,
+    "note": "EXAMPLE — invented routes, times and prices",
+    "verifie": "2026-11-07"
+  },
+  "trajets": [
+    {
+      "_example": true,
+      "id": "lisbon-comporta",
+      "date": "2027-06-18",
+      "de": "Lisbon",
+      "vers": "Comporta",
+      "qui": "a+b",
+      "type": "ground",
+      "conseil": "By car it is simple; by bus and ferry it is cheaper but the last public ferry leaves at 20:30.",
+      "options": [
+        {
+          "mode": "voiture",
+          "operateur": "Rental car, pick-up in Lisbon (invented)",
+          "depart": "10:00",
+          "arrivee": "11:45",
+          "duree": "1 h 45",
+          "prix_couple_home": 96,
+          "lien": "https://www.example.com/sample/car-rental",
+          "reserver": "a week ahead",
+          "remarque": "price for the day plus fuel; parking is free at the resort"
+        },
+        {
+          "mode": "bus+bateau",
+          "operateur": "Intercity bus to Setúbal + Setúbal–Tróia ferry + taxi (invented)",
+          "depart": "10:30",
+          "arrivee": "14:00",
+          "duree": "3 h 30",
+          "prix_couple_home": 52,
+          "lien": "https://www.example.com/sample/bus-ferry",
+          "reserver": "no booking needed",
+          "remarque": "ferry every 30 min until 20:30; taxi Tróia–resort about 35"
+        }
+      ]
+    }
+  ]
+}

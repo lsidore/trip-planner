@@ -1,0 +1,124 @@
+[
+  {
+    "_example": true,
+    "id": "lisbon-01",
+    "etape": "lisbon",
+    "nom": "Casa Miradouro Boutique Hotel",
+    "plateforme": "Booking.com",
+    "url": "https://www.example.com/sample/lisbon-01",
+    "zone": "Alfama",
+    "lat": 38.7128,
+    "lng": -9.1306,
+    "type": "boutique hotel",
+    "style": "restored townhouse, tiles and white linen",
+    "vue": "Tagus river and terracotta roofs from the terrace",
+    "piscine": false,
+    "prix_total_home": 600,
+    "prix_nuit_home": 200,
+    "nuits": 3,
+    "checkin": "2027-06-15",
+    "checkout": "2027-06-18",
+    "note": "9.1/10",
+    "nb_avis": 640,
+    "points_forts": [
+      "Rooftop terrace facing the river",
+      "Quiet lane, 6 min walk to the cathedral",
+      "Breakfast served on the terrace"
+    ],
+    "vigilance": [
+      "Steep cobbled streets, no lift to the top floor"
+    ],
+    "acces": "Taxi from the airport, 25 min",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Alfama%2C_Lisbon_%28DSC03367%29.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Alfama%2C_Lisbon_%28DSC03367%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/75/Eastern_part_of_Pra%C3%A7a_do_Com%C3%A9rcio_with_the_statue_of_King_Jos%C3%A9_I%2C_20250603_1934_8996.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lissabon_-_Alfama_-_Largo_Santa_Luzia_-_Streetcar_-_1.jpg"
+    ],
+    "top3": true,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/lisbon-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "lisbon-02",
+    "etape": "lisbon",
+    "nom": "Palacete das Flores Suites",
+    "plateforme": "Booking.com",
+    "url": "https://www.example.com/sample/lisbon-02",
+    "zone": "Chiado",
+    "lat": 38.7105,
+    "lng": -9.1425,
+    "type": "suite hotel",
+    "style": "19th-century palace, high ceilings",
+    "vue": "inner garden courtyard",
+    "piscine": false,
+    "prix_total_home": 540,
+    "prix_nuit_home": 180,
+    "nuits": 3,
+    "checkin": "2027-06-15",
+    "checkout": "2027-06-18",
+    "note": "8.8/10",
+    "nb_avis": 410,
+    "points_forts": [
+      "Large suites",
+      "Walkable to restaurants and the riverfront"
+    ],
+    "vigilance": [
+      "Street noise on Friday nights"
+    ],
+    "acces": "Metro Baixa-Chiado, 5 min walk",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Alfama%2C_Lisbon_%28DSC03367%29.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Alfama%2C_Lisbon_%28DSC03367%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/75/Eastern_part_of_Pra%C3%A7a_do_Com%C3%A9rcio_with_the_statue_of_King_Jos%C3%A9_I%2C_20250603_1934_8996.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/lisbon-02 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "lisbon-03",
+    "etape": "lisbon",
+    "nom": "Apartment above the Tile Square",
+    "plateforme": "Airbnb",
+    "url": "https://www.example.com/sample/lisbon-03",
+    "zone": "Príncipe Real",
+    "lat": 38.7176,
+    "lng": -9.1479,
+    "type": "apartment",
+    "style": "bright flat with azulejo panels",
+    "vue": "garden square and rooftops",
+    "piscine": false,
+    "prix_total_home": 420,
+    "prix_nuit_home": 140,
+    "nuits": 3,
+    "checkin": "2027-06-15",
+    "checkout": "2027-06-18",
+    "note": "4.9/5",
+    "nb_avis": 118,
+    "points_forts": [
+      "Full kitchen",
+      "Quiet side street"
+    ],
+    "vigilance": [
+      "Four flights of stairs",
+      "Self check-in only"
+    ],
+    "acces": "Taxi from the airport, 20 min",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/7/75/Eastern_part_of_Pra%C3%A7a_do_Com%C3%A9rcio_with_the_statue_of_King_Jos%C3%A9_I%2C_20250603_1934_8996.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/75/Eastern_part_of_Pra%C3%A7a_do_Com%C3%A9rcio_with_the_statue_of_King_Jos%C3%A9_I%2C_20250603_1934_8996.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 14 days before",
+    "sources": [
+      "https://www.example.com/sample/lisbon-03 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  }
+]

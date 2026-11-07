@@ -1,0 +1,10 @@
+[
+ {"code": "eta-canada", "title": "Canada eTA required for the stopover (airport transit counts)",
+  "when_stopover_country": "CA", "passports_affected": "all"},
+ {"code": "esta-usa", "title": "US ESTA required for the stopover (airport transit counts)",
+  "when_stopover_country": "US", "passports_affected": "all"},
+ {"code": "evisa-inde", "title": "Indian e-visa needed: separate tickets mean entering India to collect the bag",
+  "when_stopover_country": "IN", "only_if_separate_tickets": true, "passports_affected": "all"},
+ {"code": "transit-chine", "title": "Mainland China transit rules apply to the stopover",
+  "when_stopover_country": "CN", "passports_affected": "all"}
+]

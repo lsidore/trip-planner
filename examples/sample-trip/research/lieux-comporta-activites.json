@@ -1,0 +1,94 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "comporta-rice-field-cycle",
+      "nom": "Bicycle ride through the rice fields",
+      "categorie": "nature",
+      "sous_type": "cycling",
+      "zone": "Pego",
+      "lat": 38.378,
+      "lng": -8.785,
+      "approx": true,
+      "resume": "Flat 18 km loop with storks and old farm tracks.",
+      "pourquoi": "Slow, peaceful and free of cars.",
+      "incontournable": false,
+      "score": 4.3,
+      "tags": [
+        "cycling",
+        "nature"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/comporta-rice-field-cycle"
+        }
+      ],
+      "prix": "about 30 for two (bike rental, EXAMPLE)",
+      "prix_couple_home": 30,
+      "duree": "3 h",
+      "horaires": "dawn or late afternoon",
+      "meilleur_moment": "early morning",
+      "plats": [],
+      "a_reserver": false,
+      "reserver_quand": "no booking needed",
+      "lien_reservation": "",
+      "lien": "https://www.example.com/sample/place/comporta-rice-field-cycle",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/comporta-rice-field-cycle"
+      ],
+      "photo_urls": []
+    },
+    {
+      "_example": true,
+      "id": "comporta-sado-sunset-boat",
+      "nom": "Sado estuary sunset boat",
+      "categorie": "à faire",
+      "sous_type": "boat trip",
+      "zone": "Tróia",
+      "lat": 38.48,
+      "lng": -8.895,
+      "approx": true,
+      "resume": "Small wooden boat among the sandbars, dolphins sometimes.",
+      "pourquoi": "The most beautiful hour of the stay.",
+      "incontournable": false,
+      "score": 4.4,
+      "tags": [
+        "sunset",
+        "boat"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/comporta-sado-sunset-boat"
+        }
+      ],
+      "prix": "about 110 for two (EXAMPLE)",
+      "prix_couple_home": 110,
+      "duree": "2 h 30",
+      "horaires": "18:00 start",
+      "meilleur_moment": "sunset",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "the day before",
+      "lien_reservation": "https://www.example.com/sample/book/comporta-sado-sunset-boat",
+      "lien": "https://www.example.com/sample/place/comporta-sado-sunset-boat",
+      "fetes": "",
+      "dates": [],
+      "acces": "Meeting point in Tróia; the last public ferry is 20:30, so a taxi may be needed after.",
+      "sources": [
+        "https://www.example.com/sample/place/comporta-sado-sunset-boat"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

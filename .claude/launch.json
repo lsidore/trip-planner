@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "trip-page",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["scripts/server.py", "--port", "8793"],
+      "port": 8793
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "porto-fireworks-dinner": {
+    "_example": true,
+    "prix_couple_home": 120,
+    "compris": [
+      "set menu for two",
+      "table with view"
+    ],
+    "pas_compris": [
+      "drinks"
+    ],
+    "duree_min": 180,
+    "depart": "20:00",
+    "moment": "soir",
+    "date_fixe": "2027-06-23",
+    "jour_trajet_ok": true,
+    "quand_reserver": "maintenant",
+    "remplace": "diners",
+    "liens": [
+      {
+        "site": "Cais Booking",
+        "prix_home": 120,
+        "url": "https://www.example.com/sample/book/cais-booking",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null,
+    "speciale": "sao-joao"
+  },
+  "porto-sao-joao-party": {
+    "_example": true,
+    "prix_couple_home": 0,
+    "compris": [
+      "street festival"
+    ],
+    "pas_compris": [
+      "food and drinks"
+    ],
+    "duree_min": 240,
+    "depart": "22:00",
+    "moment": "soir",
+    "date_fixe": "2027-06-23",
+    "jour_trajet_ok": true,
+    "quand_reserver": "sans",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Festival Info",
+        "prix_home": 0,
+        "url": "https://www.example.com/sample/book/festival-info",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null,
+    "speciale": "sao-joao"
+  },
+  "porto-cellar-tasting": {
+    "_example": true,
+    "prix_couple_home": 56,
+    "compris": [
+      "three ports",
+      "cellar visit"
+    ],
+    "pas_compris": [
+      "transport"
+    ],
+    "duree_min": 90,
+    "depart": "15:00",
+    "moment": "apres-midi",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "veille",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Cellar Booking",
+        "prix_home": 56,
+        "url": "https://www.example.com/sample/book/cellar-booking",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  },
+  "porto-douro-cruise": {
+    "_example": true,
+    "prix_couple_home": 64,
+    "compris": [
+      "one hour cruise",
+      "a glass of wine each"
+    ],
+    "pas_compris": [
+      "transport"
+    ],
+    "duree_min": 60,
+    "depart": "19:30",
+    "moment": "coucher",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "veille",
+    "remplace": "verres",
+    "liens": [
+      {
+        "site": "Douro Boats",
+        "prix_home": 64,
+        "url": "https://www.example.com/sample/book/douro-boats",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "_example": true,
+  "query": "JFK → LIS on 15/06/2027, 1 adult",
+  "currency": "USD",
+  "passengers": {
+    "adults": 1,
+    "children": 0,
+    "infants": 0
+  },
+  "resultsCount": 3,
+  "itineraries": [
+    {
+      "id": "example-itinerary-1",
+      "price": 421.4,
+      "priceFormatted": "421 USD",
+      "totalDurationSeconds": 24600,
+      "bookingUrl": "https://www.example.com/sample/flight/1",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 1,
+        "checkedBag": 1
+      },
+      "outbound": {
+        "from": "JFK",
+        "to": "LIS",
+        "departureTime": "2027-06-15T07:10:00",
+        "arrivalTime": "2027-06-15T19:00:00",
+        "durationSeconds": 24600,
+        "stops": 0,
+        "route": [
+          "JFK"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "JFK",
+            "to": "LIS",
+            "fromCity": "New York",
+            "toCity": "Lisbon",
+            "fromName": "John F. Kennedy International Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "United States",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-15T07:10:00",
+            "arrivalTime": "2027-06-15T19:00:00",
+            "durationSeconds": 24600,
+            "carrier": "TP",
+            "carrierName": "TAP Air Portugal (example)",
+            "flightNumber": "TP9001",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-2",
+      "price": 389.0,
+      "priceFormatted": "389 USD",
+      "totalDurationSeconds": 38400,
+      "bookingUrl": "https://www.example.com/sample/flight/2",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 0,
+        "checkedBag": 0
+      },
+      "outbound": {
+        "from": "JFK",
+        "to": "LIS",
+        "departureTime": "2027-06-15T05:30:00",
+        "arrivalTime": "2027-06-15T21:10:00",
+        "durationSeconds": 38400,
+        "stops": 1,
+        "route": [
+          "JFK",
+          "MAD"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "JFK",
+            "to": "MAD",
+            "fromCity": "New York",
+            "toCity": "Madrid",
+            "fromName": "John F. Kennedy International Airport",
+            "toName": "Adolfo Suárez Madrid–Barajas Airport",
+            "fromCountry": "United States",
+            "toCountry": "Spain",
+            "departureTime": "2027-06-15T05:30:00",
+            "arrivalTime": "2027-06-15T18:50:00",
+            "durationSeconds": 26400,
+            "carrier": "IB",
+            "carrierName": "Iberia (example)",
+            "flightNumber": "IB9002",
+            "cabinClass": "Economy"
+          },
+          {
+            "from": "MAD",
+            "to": "LIS",
+            "fromCity": "Madrid",
+            "toCity": "Lisbon",
+            "fromName": "Adolfo Suárez Madrid–Barajas Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "Spain",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-15T20:50:00",
+            "arrivalTime": "2027-06-15T21:10:00",
+            "durationSeconds": 4800,
+            "carrier": "IB",
+            "carrierName": "Iberia (example)",
+            "flightNumber": "IB9003",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-3",
+      "price": 455.7,
+      "priceFormatted": "456 USD",
+      "totalDurationSeconds": 45900,
+      "bookingUrl": "https://www.example.com/sample/flight/3",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 1,
+        "checkedBag": 1
+      },
+      "outbound": {
+        "from": "JFK",
+        "to": "LIS",
+        "departureTime": "2027-06-15T05:45:00",
+        "arrivalTime": "2027-06-15T23:30:00",
+        "durationSeconds": 45900,
+        "stops": 1,
+        "route": [
+          "JFK",
+          "CDG"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "JFK",
+            "to": "CDG",
+            "fromCity": "New York",
+            "toCity": "Paris",
+            "fromName": "John F. Kennedy International Airport",
+            "toName": "Charles de Gaulle Airport",
+            "fromCountry": "United States",
+            "toCountry": "France",
+            "departureTime": "2027-06-15T05:45:00",
+            "arrivalTime": "2027-06-15T19:25:00",
+            "durationSeconds": 27600,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9004",
+            "cabinClass": "Economy"
+          },
+          {
+            "from": "CDG",
+            "to": "LIS",
+            "fromCity": "Paris",
+            "toCity": "Lisbon",
+            "fromName": "Charles de Gaulle Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "France",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-15T21:55:00",
+            "arrivalTime": "2027-06-15T23:30:00",
+            "durationSeconds": 9300,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9005",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    }
+  ],
+  "searchTimeMs": 400,
+  "error": null,
+  "_requete": {
+    "flyFrom": "JFK",
+    "flyTo": "LIS",
+    "departureDate": "15/06/2027",
+    "adults": 1,
+    "currency": "USD",
+    "locale": "en",
+    "sort": "price"
+  },
+  "_releve": "2026-11-07"
+}

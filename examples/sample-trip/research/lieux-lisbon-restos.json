@@ -1,0 +1,97 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "lisbon-tasca-miradouro",
+      "nom": "Tasca do Miradouro",
+      "categorie": "restaurant",
+      "sous_type": "Portuguese tasca",
+      "zone": "Alfama",
+      "lat": 38.7131,
+      "lng": -9.1297,
+      "approx": true,
+      "resume": "Six tables, grilled fish, a view over the river.",
+      "pourquoi": "Quiet and local, easy for a long dinner for two.",
+      "incontournable": false,
+      "score": 4.4,
+      "tags": [
+        "dinner",
+        "view"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/lisbon-tasca-miradouro"
+        }
+      ],
+      "prix": "about 85 for two (EXAMPLE)",
+      "prix_couple_home": 85,
+      "duree": "2 h",
+      "horaires": "20:00–23:00, closed Mondays",
+      "meilleur_moment": "dusk",
+      "plats": [
+        "grilled sea bream",
+        "clams"
+      ],
+      "a_reserver": true,
+      "reserver_quand": "a few days ahead",
+      "lien_reservation": "https://www.example.com/sample/book/lisbon-tasca-miradouro",
+      "lien": "https://www.example.com/sample/place/lisbon-tasca-miradouro",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/lisbon-tasca-miradouro"
+      ],
+      "photo_urls": []
+    },
+    {
+      "_example": true,
+      "id": "lisbon-rooftop-tejo",
+      "nom": "Terraço Tejo",
+      "categorie": "rooftop",
+      "sous_type": "rooftop bar",
+      "zone": "Baixa",
+      "lat": 38.711,
+      "lng": -9.1385,
+      "approx": true,
+      "resume": "A rooftop over the old town, best at golden hour.",
+      "pourquoi": "Drinks with a view without a dinner commitment.",
+      "incontournable": false,
+      "score": 4.0,
+      "tags": [
+        "drinks",
+        "sunset"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/lisbon-rooftop-tejo"
+        }
+      ],
+      "prix": "about 38 for two (EXAMPLE)",
+      "prix_couple_home": 38,
+      "duree": "1 h 30",
+      "horaires": "17:00–00:00",
+      "meilleur_moment": "sunset",
+      "plats": [],
+      "a_reserver": false,
+      "reserver_quand": "no booking needed",
+      "lien_reservation": "",
+      "lien": "https://www.example.com/sample/place/lisbon-rooftop-tejo",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/lisbon-rooftop-tejo"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

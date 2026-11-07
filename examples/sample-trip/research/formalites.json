@@ -1,0 +1,54 @@
+[
+  {
+    "_example": true,
+    "code": "insurance",
+    "qui": "all",
+    "titre": "Travel insurance for both travelers (invented)",
+    "cout_home": 96,
+    "delai_jours": 7,
+    "avant": "depart",
+    "condition": null,
+    "url_officielle": "https://www.example.com/sample/insurance",
+    "source": "EXAMPLE — invented rule and price",
+    "verifie": "2026-11-07"
+  },
+  {
+    "_example": true,
+    "code": "esim",
+    "qui": "all",
+    "titre": "Local eSIM with data (invented)",
+    "cout_home": 24,
+    "delai_jours": 1,
+    "avant": "depart",
+    "condition": null,
+    "url_officielle": "https://www.example.com/sample/esim",
+    "source": "EXAMPLE — invented rule and price",
+    "verifie": "2026-11-07"
+  },
+  {
+    "_example": true,
+    "code": "entry-a",
+    "qui": "a",
+    "titre": "Entry authorisation for a US passport (invented rule)",
+    "cout_home": 12,
+    "delai_jours": 3,
+    "avant": "depart",
+    "condition": null,
+    "url_officielle": "https://www.example.com/sample/entry-a",
+    "source": "EXAMPLE — invented rule and price",
+    "verifie": "2026-11-07"
+  },
+  {
+    "_example": true,
+    "code": "passport-b",
+    "qui": "b",
+    "titre": "Check passport validity (invented rule: 3 months after return)",
+    "cout_home": 0,
+    "delai_jours": 0,
+    "avant": "depart",
+    "condition": null,
+    "url_officielle": "https://www.example.com/sample/passport-b",
+    "source": "EXAMPLE — invented rule",
+    "verifie": "2026-11-07"
+  }
+]

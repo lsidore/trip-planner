@@ -1,0 +1,126 @@
+[
+  {
+    "_example": true,
+    "id": "comporta-01",
+    "etape": "comporta",
+    "nom": "Herdade do Sal Resort",
+    "plateforme": "Booking.com",
+    "url": "https://www.example.com/sample/comporta-01",
+    "zone": "Carvalhal",
+    "lat": 38.3489,
+    "lng": -8.774,
+    "type": "resort with villas",
+    "style": "thatched bungalows between rice fields and pines",
+    "vue": "rice paddies and storks, dunes behind",
+    "piscine": true,
+    "prix_total_home": 840,
+    "prix_nuit_home": 280,
+    "nuits": 3,
+    "checkin": "2027-06-18",
+    "checkout": "2027-06-21",
+    "note": "9.3/10",
+    "nb_avis": 520,
+    "points_forts": [
+      "Private terrace and plunge pool",
+      "Beach shuttle to the dunes",
+      "Spa in a former rice barn"
+    ],
+    "vigilance": [
+      "Dinner at the resort restaurant is the only option after 21:00",
+      "Last public ferry Setúbal–Tróia leaves 20:30"
+    ],
+    "acces": "Car from Lisbon, then optional ferry Setúbal–Tróia",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Comporta2.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Comporta2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/Playa_de_Comporta%2C_Portugal%2C_2021-09-12%2C_DD_15-26_PAN.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tr%C3%B3ia_vista_Serra_da_Arr%C3%A1bida.jpg"
+    ],
+    "top3": true,
+    "annulation": "free cancellation until 10 days before",
+    "sources": [
+      "https://www.example.com/sample/comporta-01 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "comporta-02",
+    "etape": "comporta",
+    "nom": "Cabana Arrozal Villas",
+    "plateforme": "Airbnb",
+    "url": "https://www.example.com/sample/comporta-02",
+    "zone": "Pego",
+    "lat": 38.3911,
+    "lng": -8.7852,
+    "type": "villa",
+    "style": "wooden cabin with reed roof",
+    "vue": "rice fields at sunset",
+    "piscine": true,
+    "prix_total_home": 720,
+    "prix_nuit_home": 240,
+    "nuits": 3,
+    "checkin": "2027-06-18",
+    "checkout": "2027-06-21",
+    "note": "4.95/5",
+    "nb_avis": 86,
+    "points_forts": [
+      "Private pool",
+      "Outdoor shower and hammocks"
+    ],
+    "vigilance": [
+      "No restaurant on site",
+      "Car essential"
+    ],
+    "acces": "Car from Lisbon, 1 h 15",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Comporta2.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Comporta2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/Playa_de_Comporta%2C_Portugal%2C_2021-09-12%2C_DD_15-26_PAN.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/comporta-02 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  },
+  {
+    "_example": true,
+    "id": "comporta-03",
+    "etape": "comporta",
+    "nom": "Pinhal Beach Cottage",
+    "plateforme": "Airbnb",
+    "url": "https://www.example.com/sample/comporta-03",
+    "zone": "Brejos",
+    "lat": 38.4152,
+    "lng": -8.7931,
+    "type": "cottage",
+    "style": "whitewashed cottage in a pine grove",
+    "vue": "pine trees, glimpse of the estuary",
+    "piscine": false,
+    "prix_total_home": 540,
+    "prix_nuit_home": 180,
+    "nuits": 3,
+    "checkin": "2027-06-18",
+    "checkout": "2027-06-21",
+    "note": "4.8/5",
+    "nb_avis": 203,
+    "points_forts": [
+      "Walk to a quiet beach",
+      "Barbecue terrace"
+    ],
+    "vigilance": [
+      "Basic kitchen",
+      "Cash only for the cleaning fee"
+    ],
+    "acces": "Car from Lisbon, 1 h 20",
+    "photo_cover": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tr%C3%B3ia_vista_Serra_da_Arr%C3%A1bida.jpg",
+    "photo_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tr%C3%B3ia_vista_Serra_da_Arr%C3%A1bida.jpg"
+    ],
+    "top3": false,
+    "annulation": "free cancellation until 7 days before",
+    "sources": [
+      "https://www.example.com/sample/comporta-03 (EXAMPLE — invented, checked 2026-11-07)"
+    ]
+  }
+]

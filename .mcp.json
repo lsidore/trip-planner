@@ -1,0 +1,80 @@
+{
+  "mcpServers": {
+    "kiwi": {
+      "type": "http",
+      "url": "https://mcp.kiwi.com/"
+    },
+    "trivago": {
+      "type": "http",
+      "url": "https://mcp.trivago.com/mcp"
+    },
+    "viator": {
+      "type": "http",
+      "url": "https://exp-app-mcp.prod.ep.viator.com/mcp"
+    },
+    "civitatis": {
+      "type": "http",
+      "url": "https://civitatis-claude-app.civitatis.com/mcp"
+    },
+    "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb"
+      ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless",
+        "--isolated"
+      ]
+    },
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp"
+    },
+    "firecrawl": {
+      "type": "http",
+      "url": "https://mcp.firecrawl.dev/v2/mcp"
+    },
+    "open-meteo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "-p",
+        "open-meteo-mcp-server@2.5.2",
+        "open-meteo-mcp-server"
+      ]
+    },
+    "currency": {
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.12",
+        "frankfurtermcp==0.5.0"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking@2.1.1"
+      ]
+    }
+  }
+}

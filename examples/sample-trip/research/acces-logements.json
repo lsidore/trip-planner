@@ -1,0 +1,35 @@
+{
+  "lisbon-01": {
+    "_example": true,
+    "aeroport": "LIS",
+    "duree_min": 25,
+    "mode": "voiture",
+    "dernier_public": null,
+    "premier_public": null,
+    "prive_home": 35,
+    "source": "Taxi fare estimate (EXAMPLE — invented)",
+    "verifie": "2026-11-07"
+  },
+  "comporta-01": {
+    "_example": true,
+    "aeroport": "LIS",
+    "duree_min": 105,
+    "mode": "voiture+bateau",
+    "dernier_public": "20:30",
+    "premier_public": "07:00",
+    "prive_home": 140,
+    "source": "Ferry operator timetable (invented) (EXAMPLE — invented)",
+    "verifie": "2026-11-07"
+  },
+  "porto-01": {
+    "_example": true,
+    "aeroport": "OPO",
+    "duree_min": 25,
+    "mode": "voiture",
+    "dernier_public": null,
+    "premier_public": null,
+    "prive_home": 30,
+    "source": "Taxi fare estimate (EXAMPLE — invented)",
+    "verifie": "2026-11-07"
+  }
+}

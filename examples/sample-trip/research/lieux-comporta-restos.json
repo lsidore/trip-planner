@@ -1,0 +1,52 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "comporta-dune-grill",
+      "nom": "Grelhados das Dunas",
+      "categorie": "restaurant",
+      "sous_type": "beach restaurant",
+      "zone": "Carvalhal beach",
+      "lat": 38.3501,
+      "lng": -8.7829,
+      "approx": true,
+      "resume": "Grilled fish and rice on a wooden deck above the dunes.",
+      "pourquoi": "Barefoot lunch, sunset on the way back.",
+      "incontournable": true,
+      "score": 4.5,
+      "tags": [
+        "lunch",
+        "beach"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/comporta-dune-grill"
+        }
+      ],
+      "prix": "about 80 for two (EXAMPLE)",
+      "prix_couple_home": 80,
+      "duree": "2 h",
+      "horaires": "12:30–22:00",
+      "meilleur_moment": "late lunch",
+      "plats": [
+        "rice with shrimp",
+        "grilled bass"
+      ],
+      "a_reserver": true,
+      "reserver_quand": "the day before",
+      "lien_reservation": "https://www.example.com/sample/book/comporta-dune-grill",
+      "lien": "https://www.example.com/sample/place/comporta-dune-grill",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/comporta-dune-grill"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

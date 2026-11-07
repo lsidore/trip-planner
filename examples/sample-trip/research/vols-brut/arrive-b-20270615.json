@@ -1,0 +1,133 @@
+{
+  "_example": true,
+  "query": "YUL → LIS on 15/06/2027, 1 adult",
+  "currency": "USD",
+  "passengers": {
+    "adults": 1,
+    "children": 0,
+    "infants": 0
+  },
+  "resultsCount": 2,
+  "itineraries": [
+    {
+      "id": "example-itinerary-4",
+      "price": 362.9,
+      "priceFormatted": "363 USD",
+      "totalDurationSeconds": 22800,
+      "bookingUrl": "https://www.example.com/sample/flight/4",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 1,
+        "checkedBag": 1
+      },
+      "outbound": {
+        "from": "YUL",
+        "to": "LIS",
+        "departureTime": "2027-06-15T08:05:00",
+        "arrivalTime": "2027-06-15T19:25:00",
+        "durationSeconds": 22800,
+        "stops": 0,
+        "route": [
+          "YUL"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "YUL",
+            "to": "LIS",
+            "fromCity": "Montreal",
+            "toCity": "Lisbon",
+            "fromName": "Montréal–Trudeau International Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "Canada",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-15T08:05:00",
+            "arrivalTime": "2027-06-15T19:25:00",
+            "durationSeconds": 22800,
+            "carrier": "AC",
+            "carrierName": "Air Canada (example)",
+            "flightNumber": "AC9011",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-5",
+      "price": 341.5,
+      "priceFormatted": "342 USD",
+      "totalDurationSeconds": 41400,
+      "bookingUrl": "https://www.example.com/sample/flight/5",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 0,
+        "checkedBag": 0
+      },
+      "outbound": {
+        "from": "YUL",
+        "to": "LIS",
+        "departureTime": "2027-06-15T06:40:00",
+        "arrivalTime": "2027-06-15T23:10:00",
+        "durationSeconds": 41400,
+        "stops": 1,
+        "route": [
+          "YUL",
+          "CDG"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "YUL",
+            "to": "CDG",
+            "fromCity": "Montreal",
+            "toCity": "Paris",
+            "fromName": "Montréal–Trudeau International Airport",
+            "toName": "Charles de Gaulle Airport",
+            "fromCountry": "Canada",
+            "toCountry": "France",
+            "departureTime": "2027-06-15T06:40:00",
+            "arrivalTime": "2027-06-15T19:20:00",
+            "durationSeconds": 24000,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9012",
+            "cabinClass": "Economy"
+          },
+          {
+            "from": "CDG",
+            "to": "LIS",
+            "fromCity": "Paris",
+            "toCity": "Lisbon",
+            "fromName": "Charles de Gaulle Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "France",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-15T21:35:00",
+            "arrivalTime": "2027-06-15T23:10:00",
+            "durationSeconds": 9300,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9013",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    }
+  ],
+  "searchTimeMs": 400,
+  "error": null,
+  "_requete": {
+    "flyFrom": "YUL",
+    "flyTo": "LIS",
+    "departureDate": "15/06/2027",
+    "adults": 1,
+    "currency": "USD",
+    "locale": "en",
+    "sort": "price"
+  },
+  "_releve": "2026-11-07"
+}

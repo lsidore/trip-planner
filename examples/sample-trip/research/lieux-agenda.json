@@ -1,0 +1,76 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "porto-sao-joao-party",
+      "nom": "São João street party",
+      "categorie": "événement",
+      "sous_type": "festival",
+      "zone": "Ribeira",
+      "lat": 41.1408,
+      "lng": -8.6118,
+      "approx": true,
+      "resume": "Night festival with grilled sardines, fireworks and soft plastic hammers.",
+      "pourquoi": "Lively, but a unique night; best seen from a table above the street.",
+      "incontournable": false,
+      "score": 4.0,
+      "tags": [
+        "festival",
+        "night"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/porto-sao-joao-party"
+        }
+      ],
+      "prix": "free (EXAMPLE)",
+      "prix_couple_home": 0,
+      "duree": "all night",
+      "horaires": "evening of 23 June",
+      "meilleur_moment": "evening",
+      "plats": [],
+      "a_reserver": false,
+      "reserver_quand": "no booking needed",
+      "lien_reservation": "",
+      "lien": "https://www.example.com/sample/place/porto-sao-joao-party",
+      "fetes": "São João (invented programme)",
+      "dates": [
+        "2027-06-23"
+      ],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/porto-sao-joao-party"
+      ],
+      "photo_urls": [],
+      "etape": "porto"
+    },
+    {
+      "_example": true,
+      "id": "lisbon-info-1",
+      "etape": "lisbon",
+      "nom": "Tram 28 queues",
+      "categorie": "info",
+      "resume": "Queues are shortest before 09:00 (EXAMPLE).",
+      "pourquoi": "Queues are shortest before 09:00 (EXAMPLE).",
+      "dates": [
+        "2027-06-16"
+      ]
+    },
+    {
+      "_example": true,
+      "id": "comporta-info-2",
+      "etape": "comporta",
+      "nom": "Reduced ferry timetable",
+      "categorie": "info",
+      "resume": "Setúbal–Tróia: last public departure at 20:30 (EXAMPLE).",
+      "pourquoi": "Setúbal–Tróia: last public departure at 20:30 (EXAMPLE).",
+      "dates": [
+        "2027-06-19"
+      ]
+    }
+  ]
+}

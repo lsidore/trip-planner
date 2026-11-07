@@ -1,0 +1,160 @@
+{
+  "_example": true,
+  "query": "LIS → OPO on 21/06/2027, 2 adults",
+  "currency": "USD",
+  "passengers": {
+    "adults": 2,
+    "children": 0,
+    "infants": 0
+  },
+  "resultsCount": 3,
+  "itineraries": [
+    {
+      "id": "example-itinerary-6",
+      "price": 104.6,
+      "priceFormatted": "105 USD",
+      "totalDurationSeconds": 3300,
+      "bookingUrl": "https://www.example.com/sample/flight/6",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 2,
+        "cabinBag": 2,
+        "checkedBag": 2
+      },
+      "outbound": {
+        "from": "LIS",
+        "to": "OPO",
+        "departureTime": "2027-06-21T11:30:00",
+        "arrivalTime": "2027-06-21T12:25:00",
+        "durationSeconds": 3300,
+        "stops": 0,
+        "route": [
+          "LIS"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "LIS",
+            "to": "OPO",
+            "fromCity": "Lisbon",
+            "toCity": "Porto",
+            "fromName": "Humberto Delgado Airport",
+            "toName": "Francisco Sá Carneiro Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-21T11:30:00",
+            "arrivalTime": "2027-06-21T12:25:00",
+            "durationSeconds": 3300,
+            "carrier": "TP",
+            "carrierName": "TAP Air Portugal (example)",
+            "flightNumber": "TP9021",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-7",
+      "price": 82.0,
+      "priceFormatted": "82 USD",
+      "totalDurationSeconds": 3300,
+      "bookingUrl": "https://www.example.com/sample/flight/7",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 2,
+        "cabinBag": 0,
+        "checkedBag": 0
+      },
+      "outbound": {
+        "from": "LIS",
+        "to": "OPO",
+        "departureTime": "2027-06-21T15:15:00",
+        "arrivalTime": "2027-06-21T16:10:00",
+        "durationSeconds": 3300,
+        "stops": 0,
+        "route": [
+          "LIS"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "LIS",
+            "to": "OPO",
+            "fromCity": "Lisbon",
+            "toCity": "Porto",
+            "fromName": "Humberto Delgado Airport",
+            "toName": "Francisco Sá Carneiro Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-21T15:15:00",
+            "arrivalTime": "2027-06-21T16:10:00",
+            "durationSeconds": 3300,
+            "carrier": "FR",
+            "carrierName": "Ryanair (example)",
+            "flightNumber": "FR9022",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-8",
+      "price": 117.6,
+      "priceFormatted": "118 USD",
+      "totalDurationSeconds": 3300,
+      "bookingUrl": "https://www.example.com/sample/flight/8",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 2,
+        "cabinBag": 2,
+        "checkedBag": 2
+      },
+      "outbound": {
+        "from": "LIS",
+        "to": "OPO",
+        "departureTime": "2027-06-21T18:40:00",
+        "arrivalTime": "2027-06-21T19:35:00",
+        "durationSeconds": 3300,
+        "stops": 0,
+        "route": [
+          "LIS"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "LIS",
+            "to": "OPO",
+            "fromCity": "Lisbon",
+            "toCity": "Porto",
+            "fromName": "Humberto Delgado Airport",
+            "toName": "Francisco Sá Carneiro Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-21T18:40:00",
+            "arrivalTime": "2027-06-21T19:35:00",
+            "durationSeconds": 3300,
+            "carrier": "TP",
+            "carrierName": "TAP Air Portugal (example)",
+            "flightNumber": "TP9023",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    }
+  ],
+  "searchTimeMs": 400,
+  "error": null,
+  "_requete": {
+    "flyFrom": "LIS",
+    "flyTo": "OPO",
+    "departureDate": "21/06/2027",
+    "adults": 2,
+    "currency": "USD",
+    "locale": "en",
+    "sort": "price"
+  },
+  "_releve": "2026-11-07"
+}

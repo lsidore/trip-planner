@@ -1,0 +1,94 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "porto-cellar-tasting",
+      "nom": "Port cellar tasting in Gaia",
+      "categorie": "à faire",
+      "sous_type": "tasting",
+      "zone": "Vila Nova de Gaia",
+      "lat": 41.1374,
+      "lng": -8.613,
+      "approx": true,
+      "resume": "Three ports and a cellar visit across the river.",
+      "pourquoi": "Easy, seated, and a good first afternoon.",
+      "incontournable": false,
+      "score": 4.3,
+      "tags": [
+        "tasting",
+        "indoor"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/porto-cellar-tasting"
+        }
+      ],
+      "prix": "about 56 for two (EXAMPLE)",
+      "prix_couple_home": 56,
+      "duree": "1 h 30",
+      "horaires": "15:00 start",
+      "meilleur_moment": "afternoon",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "the day before",
+      "lien_reservation": "https://www.example.com/sample/book/porto-cellar-tasting",
+      "lien": "https://www.example.com/sample/place/porto-cellar-tasting",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/porto-cellar-tasting"
+      ],
+      "photo_urls": []
+    },
+    {
+      "_example": true,
+      "id": "porto-douro-cruise",
+      "nom": "Small-boat Douro cruise at golden hour",
+      "categorie": "à faire",
+      "sous_type": "boat trip",
+      "zone": "Ribeira",
+      "lat": 41.141,
+      "lng": -8.6105,
+      "approx": true,
+      "resume": "Six bridges in one hour, glass of wine in hand.",
+      "pourquoi": "Quiet on the water, a view of the city from below.",
+      "incontournable": false,
+      "score": 4.1,
+      "tags": [
+        "boat",
+        "sunset"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/porto-douro-cruise"
+        }
+      ],
+      "prix": "about 64 for two (EXAMPLE)",
+      "prix_couple_home": 64,
+      "duree": "1 h",
+      "horaires": "19:30 start",
+      "meilleur_moment": "sunset",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "the day before",
+      "lien_reservation": "https://www.example.com/sample/book/porto-douro-cruise",
+      "lien": "https://www.example.com/sample/place/porto-douro-cruise",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/porto-douro-cruise"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

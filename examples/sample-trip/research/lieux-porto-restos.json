@@ -1,0 +1,51 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "porto-fireworks-dinner",
+      "nom": "Cais Dinner on São João night",
+      "categorie": "restaurant",
+      "sous_type": "set menu dinner",
+      "zone": "Ribeira",
+      "lat": 41.1405,
+      "lng": -8.612,
+      "approx": true,
+      "resume": "Set-menu dinner on the quay, fireworks at midnight.",
+      "pourquoi": "The one table to book for 23 June.",
+      "incontournable": true,
+      "score": 4.2,
+      "tags": [
+        "dinner",
+        "festival"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/porto-fireworks-dinner"
+        }
+      ],
+      "prix": "about 120 for two (EXAMPLE)",
+      "prix_couple_home": 120,
+      "duree": "3 h",
+      "horaires": "20:00–01:00 on 23 June",
+      "meilleur_moment": "evening",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "now",
+      "lien_reservation": "https://www.example.com/sample/book/porto-fireworks-dinner",
+      "lien": "https://www.example.com/sample/place/porto-fireworks-dinner",
+      "fetes": "São João (invented programme)",
+      "dates": [
+        "2027-06-23"
+      ],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/porto-fireworks-dinner"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

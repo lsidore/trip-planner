@@ -1,0 +1,23 @@
+{
+  "_example": true,
+  "slug": "sample-portugal",
+  "title": "Lisbon, Comporta & Porto (example)",
+  "language": "en",
+  "currency": {"home": "USD", "local": "EUR"},
+  "budget_cap": 6000,
+  "travelers": [
+    {"id": "a", "label": "Alex", "adults": 1, "home_airport": "JFK", "home_city": "New York"},
+    {"id": "b", "label": "Sam", "adults": 1, "home_airport": "YUL", "home_city": "Montreal"}
+  ],
+  "stages": [
+    {"key": "lisbon", "title": "Lisbon", "from": "2027-06-15", "to": "2027-06-18",
+     "tz": "Europe/Lisbon", "ref": [38.7223, -9.1393], "airports": ["LIS"], "country": "PT"},
+    {"key": "comporta", "title": "Comporta", "from": "2027-06-18", "to": "2027-06-21",
+     "tz": "Europe/Lisbon", "ref": [38.3796, -8.7872], "airports": [], "depart_airports": ["LIS"], "country": "PT"},
+    {"key": "porto", "title": "Porto", "from": "2027-06-21", "to": "2027-06-24",
+     "tz": "Europe/Lisbon", "ref": [41.1579, -8.6291], "airports": ["OPO"], "arrive_by": "flight", "country": "PT"}
+  ],
+  "specials": [
+    {"key": "sao-joao", "stage": "porto", "date": "2027-06-23", "title": "São João night"}
+  ]
+}

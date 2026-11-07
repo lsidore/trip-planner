@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Personal trips and generated files (never versioned)
+trips/*
+!trips/.gitkeep
+.setup/
+
+# Example trips: only the invented research is versioned; what a build or a photo download writes is not
+examples/*/site/
+examples/*/state.json
+examples/*/.state.json.lock
+examples/*/research/vols-options.json
+examples/*/research/medias-cache/
+examples/*/research/poi-cache/
+examples/*/research/previews/
+examples/*/research/lieux-photos-extra.json
+
+# Tooling
+node_modules/
+__pycache__/
+.DS_Store
+.playwright-mcp/
+.superpowers/
+.claude/settings.local.json

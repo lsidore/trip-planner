@@ -1,0 +1,87 @@
+{
+  "comporta-dune-grill": {
+    "_example": true,
+    "prix_couple_home": 80,
+    "compris": [
+      "grilled fish for two",
+      "rice"
+    ],
+    "pas_compris": [
+      "drinks"
+    ],
+    "duree_min": 120,
+    "depart": "13:00",
+    "moment": "journee",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "veille",
+    "remplace": "dejeuners",
+    "liens": [
+      {
+        "site": "Grelhados Booking",
+        "prix_home": 80,
+        "url": "https://www.example.com/sample/book/grelhados-booking",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  },
+  "comporta-rice-field-cycle": {
+    "_example": true,
+    "prix_couple_home": 30,
+    "compris": [
+      "two bicycles"
+    ],
+    "pas_compris": [
+      "water",
+      "snacks"
+    ],
+    "duree_min": 180,
+    "depart": "08:00",
+    "moment": "aube",
+    "date_fixe": null,
+    "jour_trajet_ok": true,
+    "quand_reserver": "sans",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Bike Rental",
+        "prix_home": 30,
+        "url": "https://www.example.com/sample/book/bike-rental",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null,
+    "prix_estime": true
+  },
+  "comporta-sado-sunset-boat": {
+    "_example": true,
+    "prix_couple_home": 110,
+    "compris": [
+      "boat for two",
+      "glass of wine"
+    ],
+    "pas_compris": [
+      "taxi back from Tróia"
+    ],
+    "duree_min": 150,
+    "depart": "18:00",
+    "moment": "coucher",
+    "date_fixe": null,
+    "jour_trajet_ok": false,
+    "quand_reserver": "veille",
+    "remplace": null,
+    "liens": [
+      {
+        "site": "Sado Boats",
+        "prix_home": 110,
+        "url": "https://www.example.com/sample/book/sado-boats",
+        "verifie": "2026-11-07"
+      }
+    ],
+    "reveillon": false,
+    "hausse": null
+  }
+}

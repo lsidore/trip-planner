@@ -1,0 +1,204 @@
+/* Parcours du voyage, une étape par écran. En-tête collant (progression, mode, partage, pastille du total), bandeau
+   d'alertes, la question en grand, l'écran de l'étape, bas de page fixe « ← Retour / Suivant → ».
+   Colour tokens (light, then dark twice: prefers-color-scheme and [data-theme]). --tone-1..5 are the stage colours
+   (stage.tone, default = the stage's order). Fonts: Fraunces for titles, Inter for text, with system fallbacks.
+   Chaque écran ajoute ses styles dans page/css/<écran>.css, à partir de ces jetons. */
+:root{
+  --bg:#eef1ec; --paper:#f8faf6; --ink:#1d2433; --muted:#5b6474; --line:#cdd5cb; --shade:rgba(17,22,30,.55); --soft:#e3e9e0;
+  --accent:#b8611a; --info:#1f7a8c;
+  --tone-1:#1f7a8c; --tone-2:#3f6b3a; --tone-3:#6a4c93; --tone-4:#b0486b; --tone-5:#a8741a; --good:#2f6b45; --warn:#9a5b12; --bad:#b03a2e;
+  --c-voir:#7a4fb0; --c-faire:#1f7a8c; --c-manger:#c0392b; --c-boire:#9c3d6b; --c-bienetre:#2f855a; --c-agenda:#a86a12;
+  --c-logement:#b8611a; --c-hotel:#4b5563; --c-pepite:#0f766e; --heart:#d23f57;
+  --lb:#0d1116; --lb-ink:#f1f3ef;
+  --ton:var(--accent);
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Inter", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --gauche:max(16px,env(safe-area-inset-left,0px)); --droite:max(16px,env(safe-area-inset-right,0px));
+  --bas:env(safe-area-inset-bottom,0px); --haut:env(safe-area-inset-top,0px);
+  --largeur:1080px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a1f; --paper:#1b232a; --ink:#e7ebe5; --muted:#a2acb6; --line:#2f3a43; --shade:rgba(0,0,0,.6); --soft:#222c34;
+  --accent:#e39a52; --info:#57b5c6;
+  --tone-1:#57b5c6; --tone-2:#86b77c; --tone-3:#b39ddb; --tone-4:#e08fb5; --tone-5:#e3b25a; --good:#7fc79a; --warn:#e3a55a; --bad:#ef7d6e;
+  --c-voir:#b39ddb; --c-faire:#57b5c6; --c-manger:#ef8a7c; --c-boire:#e08fb5; --c-bienetre:#7fc79a; --c-agenda:#e3b25a;
+  --c-logement:#e39a52; --c-hotel:#9aa5b1; --c-pepite:#4fc7b5; --heart:#ff7088; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#141a1f; --paper:#1b232a; --ink:#e7ebe5; --muted:#a2acb6; --line:#2f3a43; --shade:rgba(0,0,0,.6); --soft:#222c34;
+  --accent:#e39a52; --info:#57b5c6;
+  --tone-1:#57b5c6; --tone-2:#86b77c; --tone-3:#b39ddb; --tone-4:#e08fb5; --tone-5:#e3b25a; --good:#7fc79a; --warn:#e3a55a; --bad:#ef7d6e;
+  --c-voir:#b39ddb; --c-faire:#57b5c6; --c-manger:#ef8a7c; --c-boire:#e08fb5; --c-bienetre:#7fc79a; --c-agenda:#e3b25a;
+  --c-logement:#e39a52; --c-hotel:#9aa5b1; --c-pepite:#4fc7b5; --heart:#ff7088; color-scheme:dark }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:150px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;margin:0;
+  padding-left:var(--gauche);padding-right:var(--droite);padding-block:0 calc(92px + var(--bas))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:var(--haut);z-index:1100;background:var(--bg)}
+a{color:inherit}
+img{max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1:focus,.ecran:focus{outline:none}
+.ton-accent{--ton:var(--accent)} 
+.ton-tone-1{--ton:var(--tone-1)} .ton-tone-2{--ton:var(--tone-2)} .ton-tone-3{--ton:var(--tone-3)} .ton-tone-4{--ton:var(--tone-4)} .ton-tone-5{--ton:var(--tone-5)}
+
+/* Simple / Détaillé : .d-only n'apparaît qu'en Détaillé, .s-only qu'en Simple (dans tous les écrans) */
+body:not(.mode-detail) .d-only{display:none!important}
+body.mode-detail .s-only{display:none!important}
+
+/* Éléments communs aux écrans */
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--paper);border-radius:999px;
+  padding:7px 15px;cursor:pointer;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;min-height:38px}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.btn.small{padding:3px 11px;font-size:13px;min-height:30px}
+.btn svg{width:16px;height:16px;flex:none}
+.discret{color:var(--muted);font-size:14px}
+.tag-incomplet{font-style:normal;font-size:12px;font-weight:700;color:var(--warn);border:1px solid currentColor;border-radius:999px;padding:0 7px;white-space:nowrap}
+.sauter{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--paper);padding:8px 12px;border-radius:8px}
+.sauter:focus{left:calc(var(--gauche) + 4px);top:calc(var(--haut) + 4px)}
+
+/* ================= En-tête ================= */
+.tete{position:sticky;top:var(--haut);z-index:1000;background:var(--bg);border-bottom:1px solid var(--line);
+  margin-left:calc(-1 * var(--gauche));margin-right:calc(-1 * var(--droite));padding-left:var(--gauche);padding-right:var(--droite)}
+.tete-in{max-width:var(--largeur);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:"prog pastille" "outils outils";gap:4px 12px;align-items:center;padding-block:8px}
+.marque{display:none;margin:0;font-family:var(--display);font-size:17px;line-height:1.2;white-space:nowrap}
+.prog{grid-area:prog;display:flex;align-items:center;gap:10px;min-width:0}
+.points{list-style:none;margin:0;padding:0;display:flex;align-items:center}
+.points button{display:grid;place-items:center;width:22px;height:30px;padding:0;border:0;background:none;cursor:pointer}
+.points button::before{content:"";width:9px;height:9px;border-radius:999px;border:1.5px solid var(--muted);transition:width .2s}
+.points .fait button::before{background:var(--accent);border-color:var(--accent)}
+.points .ici button{width:30px}
+.points .ici button::before{width:22px;background:var(--ton);border-color:var(--ton)}
+.points button:hover::before{border-color:var(--ink)}
+.prog-t{font-size:14px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.prog-t span{font-weight:500;color:var(--muted)}
+.outils{grid-area:outils;display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;min-width:0}
+.sync{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);white-space:nowrap;margin-right:auto}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.sync.on i{background:var(--good)}
+.sync.ro i{background:var(--warn)}
+.lien-carte{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding-block:4px}
+.lien-carte:hover{color:var(--ink)}
+.lien-carte svg{width:16px;height:16px}
+.mode{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:var(--paper);padding:2px}
+.mode button{border:0;background:none;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;min-height:28px}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.pastille{grid-area:pastille;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--paper);
+  border-radius:999px;padding:5px 10px 5px 14px;cursor:pointer;text-align:right;min-height:44px}
+.pastille:hover{border-color:var(--ink)}
+.p-txt{display:grid;line-height:1.15}
+.p-tot{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.p-sous{font-size:12px;color:var(--good);font-variant-numeric:tabular-nums;white-space:nowrap}
+.p-sous:empty{display:none}
+.pastille.incomplet .p-sous{color:var(--warn)}
+.pastille.depasse .p-sous{color:var(--bad)}
+.pastille svg{width:16px;height:16px;color:var(--muted);flex:none}
+
+@media (max-width:419px){
+  .tete-in{gap:2px 10px}
+  .prog{gap:6px}
+  .points button{width:16px}
+  .points .ici button{width:26px}
+  .points button::before{width:8px;height:8px}
+  .points .ici button::before{width:18px}
+  .prog-t{font-size:13px}
+  .outils{gap:6px 10px}
+  .sync .long,.lien-carte span{display:none}
+  .mode button{padding-inline:10px}
+  .pastille{padding:4px 8px 4px 12px}
+  /* « 1 281 € au-dessus de 10 000 € » tient sur un téléphone : la phrase passe sur deux lignes dans la pastille, et
+     « Étape n sur 6 » sur deux lignes (« sur 6 » dessous) quand la place manque, plutôt que de passer sous la pastille */
+  .prog-t{white-space:normal;line-height:1.15;min-width:0}
+  .prog-t span{font-size:12px}
+  .p-sous{white-space:normal;max-width:10em;line-height:1.2}
+}
+@media (min-width:900px){
+  .tete-in{grid-template-columns:auto auto minmax(0,1fr) auto;grid-template-areas:"marque prog outils pastille";gap:12px 22px;padding-block:10px}
+  .marque{display:block;grid-area:marque}
+  .outils{justify-content:flex-end}
+  .sync{margin-right:0}
+}
+
+/* ================= Page, alertes, question ================= */
+.page{max-width:var(--largeur);margin:0 auto}
+.alertes{display:grid;gap:8px;margin-top:12px}
+.alerte{--al:var(--warn);display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start;padding:10px 14px;border-radius:12px;
+  border:1px solid color-mix(in srgb,var(--al) 45%,var(--line));background:color-mix(in srgb,var(--al) 10%,var(--paper))}
+.alerte.bloquant{--al:var(--bad)}
+.alerte.info{--al:var(--info)}
+.alerte svg{width:20px;height:20px;color:var(--al);margin-top:2px}
+.al-t{min-width:0}
+.al-t p{margin:0}
+.al-t b{color:var(--al)}
+.al-sol{font-size:14px;color:var(--muted);margin-top:2px!important}
+
+.question{padding-block:22px 6px;display:grid;gap:6px;justify-items:start}
+.q-sur{margin:0;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ton);font-variant-numeric:tabular-nums}
+.question h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(26px,4.4vw,40px);line-height:1.15;text-wrap:balance;max-width:24ch}
+.q-sous{margin:0;color:var(--muted);max-width:62ch}
+.sous-etapes{display:inline-flex;flex-wrap:wrap;gap:4px;margin-top:8px;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
+.sous-etapes button{border:0;background:none;border-radius:999px;padding:5px 14px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;min-height:34px}
+.sous-etapes button[aria-current="step"]{background:var(--ton);color:var(--paper)}
+.sous-etapes button:not([aria-current]):hover{color:var(--ink)}
+
+/* ================= Écran ================= */
+.ecran{padding-block:16px 28px;min-height:40vh}
+.attente{display:grid;justify-items:start;gap:6px;max-width:640px;padding:26px 22px;border:1px dashed var(--line);border-radius:16px;background:var(--paper);color:var(--muted)}
+.attente svg{width:44px;height:44px;color:var(--ton);margin-bottom:4px}
+.attente p{margin:0}
+.attente ul{margin:0;padding-left:20px}
+.attente-t{font-size:19px;font-weight:700;color:var(--ink)}
+.attente-choix{color:var(--ink)}
+.attente .btn{margin-top:8px}
+.attente.calme{border:0;background:none;padding-inline:0}
+.attente code{font-size:13px;background:var(--soft);border-radius:6px;padding:1px 5px;overflow-wrap:anywhere}
+
+/* ================= Bas de page ================= */
+.pied{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:var(--paper);border-top:1px solid var(--line);
+  padding:10px var(--droite) calc(10px + var(--bas)) var(--gauche)}
+.pied-in{max-width:var(--largeur);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.btn-retour,.btn-suivant{display:inline-flex;align-items:center;gap:6px;border-radius:999px;min-height:46px;padding:8px 18px;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap}
+.btn-retour{border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.btn-retour:hover:not(:disabled){border-color:var(--ink)}
+.btn-retour:disabled{opacity:.45;cursor:default}
+.btn-suivant{margin-left:auto;border:1px solid var(--accent);background:var(--accent);color:var(--paper);min-width:0;overflow:hidden;text-overflow:ellipsis}
+.btn-suivant:hover{filter:brightness(1.06)}
+@media (max-width:419px){.lib-retour{display:none}.btn-retour{padding-inline:15px}.btn-suivant{padding-inline:15px}}
+
+/* ================= Panneau (détail du voyage, fiches plein écran) ================= */
+.panneau{padding:0;border:0;margin:0;inset:0;width:100%;height:100%;max-width:none;max-height:none;background:var(--paper);color:var(--ink);overflow:hidden}
+.panneau[open]{display:flex;flex-direction:column}
+.panneau::backdrop{background:var(--shade)}
+.pan-tete{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);
+  padding:calc(10px + var(--haut)) var(--droite) 10px var(--gauche)}
+.pan-tete h2{margin:0;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2;text-wrap:balance}
+.pan-x{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:16px}
+.pan-x:hover{border-color:var(--ink)}
+.pan-corps{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:16px var(--droite) calc(24px + var(--bas)) var(--gauche)}
+body.panneau-ouvert{overflow:hidden}
+@media (min-width:760px){
+  .panneau{width:min(880px,calc(100% - 48px));height:auto;max-height:calc(100% - 48px);margin:auto;border:1px solid var(--line);border-radius:18px}
+  .pan-tete{padding:14px 20px}
+  .pan-corps{padding:18px 20px 24px}
+}
+
+/* Résumé du total (avant que le détail du voyage existe) */
+.resume{display:grid;max-width:560px;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:12px}
+.res-l{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 14px;border-top:1px solid var(--line)}
+.res-l:first-child{border-top:0}
+.res-l b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.res-l small{color:var(--muted)}
+.res-l.tot{background:var(--soft);font-size:17px}
+.res-l.ok b{color:var(--good)}
+.res-l.trop b{color:var(--bad)}
+.res-l.hors{color:var(--muted)}
+
+/* Message bref */
+.toast{position:fixed;left:50%;bottom:calc(84px + var(--bas));transform:translateX(-50%);z-index:2100;background:var(--ink);color:var(--bg);
+  padding:10px 16px;border-radius:12px;font-size:14px;max-width:min(92vw,520px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

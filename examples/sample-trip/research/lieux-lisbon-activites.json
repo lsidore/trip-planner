@@ -1,0 +1,94 @@
+{
+  "pois": [
+    {
+      "_example": true,
+      "id": "lisbon-alfama-walk",
+      "nom": "Alfama morning walk with a local guide",
+      "categorie": "à faire",
+      "sous_type": "walking tour",
+      "zone": "Alfama",
+      "lat": 38.7115,
+      "lng": -9.13,
+      "approx": true,
+      "resume": "Two hours through lanes and viewpoints before the crowds.",
+      "pourquoi": "Gentle pace, ends with a coffee on a terrace.",
+      "incontournable": true,
+      "score": 4.3,
+      "tags": [
+        "walk",
+        "culture"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/lisbon-alfama-walk"
+        }
+      ],
+      "prix": "about 70 for two (EXAMPLE)",
+      "prix_couple_home": 70,
+      "duree": "2 h 30",
+      "horaires": "09:00 start",
+      "meilleur_moment": "morning",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "the day before",
+      "lien_reservation": "https://www.example.com/sample/book/lisbon-alfama-walk",
+      "lien": "https://www.example.com/sample/place/lisbon-alfama-walk",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/lisbon-alfama-walk"
+      ],
+      "photo_urls": []
+    },
+    {
+      "_example": true,
+      "id": "lisbon-azulejo-workshop",
+      "nom": "Azulejo painting workshop",
+      "categorie": "à faire",
+      "sous_type": "workshop",
+      "zone": "Marvila",
+      "lat": 38.726,
+      "lng": -9.105,
+      "approx": true,
+      "resume": "Paint and fire your own tile in a small studio.",
+      "pourquoi": "A shared, quiet activity with a keepsake.",
+      "incontournable": false,
+      "score": 4.2,
+      "tags": [
+        "craft",
+        "indoor"
+      ],
+      "distinctions": [],
+      "notes": [
+        {
+          "site": "Example Reviews",
+          "note": 4.6,
+          "avis": 320,
+          "url": "https://www.example.com/sample/reviews/lisbon-azulejo-workshop"
+        }
+      ],
+      "prix": "about 90 for two (EXAMPLE)",
+      "prix_couple_home": 90,
+      "duree": "2 h",
+      "horaires": "14:00 start",
+      "meilleur_moment": "afternoon",
+      "plats": [],
+      "a_reserver": true,
+      "reserver_quand": "a few days ahead",
+      "lien_reservation": "https://www.example.com/sample/book/lisbon-azulejo-workshop",
+      "lien": "https://www.example.com/sample/place/lisbon-azulejo-workshop",
+      "fetes": "",
+      "dates": [],
+      "acces": "",
+      "sources": [
+        "https://www.example.com/sample/place/lisbon-azulejo-workshop"
+      ],
+      "photo_urls": []
+    }
+  ]
+}

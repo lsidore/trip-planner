@@ -1,0 +1,162 @@
+{
+  "lisbon-01": {
+    "petits_dej": [
+      {
+        "_example": true,
+        "n": 6,
+        "u": 18,
+        "lib": "terrace breakfast, per person",
+        "src": "carte"
+      }
+    ],
+    "diners": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 100,
+        "lib": "dinner in the old town",
+        "src": "estimé"
+      },
+      {
+        "_example": true,
+        "n": 1,
+        "u": 85,
+        "lib": "dinner at a tasca",
+        "src": "estimé"
+      }
+    ],
+    "verres": [
+      {
+        "_example": true,
+        "n": 4,
+        "u": 16,
+        "lib": "sunset drinks",
+        "src": "estimé"
+      }
+    ],
+    "transferts": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 28,
+        "lib": "taxi",
+        "src": "estimé"
+      }
+    ]
+  },
+  "comporta-01": {
+    "petits_dej": [
+      {
+        "_example": true,
+        "n": 6,
+        "u": 20,
+        "lib": "resort breakfast, per person",
+        "src": "carte"
+      }
+    ],
+    "diners": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 120,
+        "lib": "resort dinner",
+        "src": "carte"
+      },
+      {
+        "_example": true,
+        "n": 1,
+        "u": 90,
+        "lib": "beach restaurant dinner",
+        "src": "estimé"
+      }
+    ],
+    "verres": [
+      {
+        "_example": true,
+        "n": 6,
+        "u": 14,
+        "lib": "drinks",
+        "src": "estimé"
+      }
+    ],
+    "spa": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 85,
+        "lib": "massage, 50 min",
+        "src": "carte"
+      }
+    ],
+    "transferts": [
+      {
+        "_example": true,
+        "n": 1,
+        "u": 60,
+        "lib": "ferry and car, Setúbal–Tróia leg",
+        "src": "estimé"
+      },
+      {
+        "_example": true,
+        "n": 1,
+        "u": 60,
+        "lib": "taxi back to the resort",
+        "src": "estimé"
+      }
+    ]
+  },
+  "porto-01": {
+    "petits_dej": [
+      {
+        "_example": true,
+        "n": 6,
+        "u": 18,
+        "lib": "buffet breakfast, per person",
+        "src": "carte"
+      }
+    ],
+    "diners": [
+      {
+        "_example": true,
+        "n": 1,
+        "u": 100,
+        "lib": "dinner in Ribeira",
+        "src": "estimé"
+      },
+      {
+        "_example": true,
+        "n": 1,
+        "u": 85,
+        "lib": "dinner in Foz",
+        "src": "estimé"
+      }
+    ],
+    "verres": [
+      {
+        "_example": true,
+        "n": 5,
+        "u": 16,
+        "lib": "rooftop drinks",
+        "src": "estimé"
+      }
+    ],
+    "transferts": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 30,
+        "lib": "taxi",
+        "src": "estimé"
+      }
+    ],
+    "gala": [
+      {
+        "_example": true,
+        "n": 2,
+        "u": 130,
+        "lib": "São João gala dinner, per person",
+        "src": "carte"
+      }
+    ]
+  }
+}

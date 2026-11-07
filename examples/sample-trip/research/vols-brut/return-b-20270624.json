@@ -1,0 +1,151 @@
+{
+  "_example": true,
+  "query": "OPO → YUL on 24/06/2027, 1 adult",
+  "currency": "USD",
+  "passengers": {
+    "adults": 1,
+    "children": 0,
+    "infants": 0
+  },
+  "resultsCount": 2,
+  "itineraries": [
+    {
+      "id": "example-itinerary-11",
+      "price": 391.9,
+      "priceFormatted": "392 USD",
+      "totalDurationSeconds": 39600,
+      "bookingUrl": "https://www.example.com/sample/flight/11",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 1,
+        "checkedBag": 1
+      },
+      "outbound": {
+        "from": "OPO",
+        "to": "YUL",
+        "departureTime": "2027-06-24T07:15:00",
+        "arrivalTime": "2027-06-24T13:15:00",
+        "durationSeconds": 39600,
+        "stops": 1,
+        "route": [
+          "OPO",
+          "LIS"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "OPO",
+            "to": "LIS",
+            "fromCity": "Porto",
+            "toCity": "Lisbon",
+            "fromName": "Francisco Sá Carneiro Airport",
+            "toName": "Humberto Delgado Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "Portugal",
+            "departureTime": "2027-06-24T07:15:00",
+            "arrivalTime": "2027-06-24T08:10:00",
+            "durationSeconds": 3300,
+            "carrier": "TP",
+            "carrierName": "TAP Air Portugal (example)",
+            "flightNumber": "TP9041",
+            "cabinClass": "Economy"
+          },
+          {
+            "from": "LIS",
+            "to": "YUL",
+            "fromCity": "Lisbon",
+            "toCity": "Montreal",
+            "fromName": "Humberto Delgado Airport",
+            "toName": "Montréal–Trudeau International Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "Canada",
+            "departureTime": "2027-06-24T10:55:00",
+            "arrivalTime": "2027-06-24T13:15:00",
+            "durationSeconds": 26400,
+            "carrier": "AC",
+            "carrierName": "Air Canada (example)",
+            "flightNumber": "AC9042",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    },
+    {
+      "id": "example-itinerary-12",
+      "price": 372.4,
+      "priceFormatted": "372 USD",
+      "totalDurationSeconds": 44700,
+      "bookingUrl": "https://www.example.com/sample/flight/12",
+      "imageId": "example",
+      "baggage": {
+        "personalItem": 1,
+        "cabinBag": 0,
+        "checkedBag": 0
+      },
+      "outbound": {
+        "from": "OPO",
+        "to": "YUL",
+        "departureTime": "2027-06-24T08:20:00",
+        "arrivalTime": "2027-06-24T15:45:00",
+        "durationSeconds": 44700,
+        "stops": 1,
+        "route": [
+          "OPO",
+          "CDG"
+        ],
+        "cabinClass": "Economy",
+        "segments": [
+          {
+            "from": "OPO",
+            "to": "CDG",
+            "fromCity": "Porto",
+            "toCity": "Paris",
+            "fromName": "Francisco Sá Carneiro Airport",
+            "toName": "Charles de Gaulle Airport",
+            "fromCountry": "Portugal",
+            "toCountry": "France",
+            "departureTime": "2027-06-24T08:20:00",
+            "arrivalTime": "2027-06-24T11:30:00",
+            "durationSeconds": 7800,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9043",
+            "cabinClass": "Economy"
+          },
+          {
+            "from": "CDG",
+            "to": "YUL",
+            "fromCity": "Paris",
+            "toCity": "Montreal",
+            "fromName": "Charles de Gaulle Airport",
+            "toName": "Montréal–Trudeau International Airport",
+            "fromCountry": "France",
+            "toCountry": "Canada",
+            "departureTime": "2027-06-24T14:00:00",
+            "arrivalTime": "2027-06-24T15:45:00",
+            "durationSeconds": 27900,
+            "carrier": "AF",
+            "carrierName": "Air France (example)",
+            "flightNumber": "AF9044",
+            "cabinClass": "Economy"
+          }
+        ]
+      },
+      "inbound": null
+    }
+  ],
+  "searchTimeMs": 400,
+  "error": null,
+  "_requete": {
+    "flyFrom": "OPO",
+    "flyTo": "YUL",
+    "departureDate": "24/06/2027",
+    "adults": 1,
+    "currency": "USD",
+    "locale": "en",
+    "sort": "price"
+  },
+  "_releve": "2026-11-07"
+}

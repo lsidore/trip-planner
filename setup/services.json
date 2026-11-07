@@ -1,0 +1,518 @@
+{
+  "services": [
+    {
+      "id": "kiwi",
+      "name": "Kiwi.com flights",
+      "group": "keyless",
+      "what_for": "Flight search (prices, schedules, baggage)",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.kiwi.com/",
+      "mcp_name": "kiwi"
+    },
+    {
+      "id": "trivago",
+      "name": "trivago",
+      "group": "keyless",
+      "what_for": "Hotel and apartment price comparison",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.trivago.com/",
+      "mcp_name": "trivago"
+    },
+    {
+      "id": "viator",
+      "name": "Viator",
+      "group": "keyless",
+      "what_for": "Tours and activities",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.viator.com/",
+      "mcp_name": "viator"
+    },
+    {
+      "id": "civitatis",
+      "name": "Civitatis",
+      "group": "keyless",
+      "what_for": "Tours and activities (booking needs your OK)",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.civitatis.com/",
+      "mcp_name": "civitatis"
+    },
+    {
+      "id": "airbnb",
+      "name": "Airbnb (OpenBnB server)",
+      "group": "keyless",
+      "what_for": "Villas, houses and apartments",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.airbnb.com/",
+      "mcp_name": "airbnb"
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "group": "keyless",
+      "what_for": "Read any web page as text",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://github.com/modelcontextprotocol/servers",
+      "mcp_name": "fetch"
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "group": "keyless",
+      "what_for": "Time zones and local times",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://github.com/modelcontextprotocol/servers",
+      "mcp_name": "time"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright browser",
+      "group": "keyless",
+      "what_for": "Headless browser to read pages that need scripts",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://playwright.dev/",
+      "mcp_name": "playwright"
+    },
+    {
+      "id": "exa-keyless",
+      "name": "Exa web search (no key)",
+      "group": "keyless",
+      "what_for": "Web search for pages and places",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://exa.ai/",
+      "mcp_name": "exa"
+    },
+    {
+      "id": "firecrawl-keyless",
+      "name": "Firecrawl (no key)",
+      "group": "keyless",
+      "what_for": "Search and scrape web pages",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.firecrawl.dev/",
+      "mcp_name": "firecrawl"
+    },
+    {
+      "id": "open-meteo",
+      "name": "Open-Meteo",
+      "group": "keyless",
+      "what_for": "Weather, sea conditions, climate",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://open-meteo.com/",
+      "mcp_name": "open-meteo"
+    },
+    {
+      "id": "currency",
+      "name": "Frankfurter currency",
+      "group": "keyless",
+      "what_for": "Exchange rates (ECB)",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://frankfurter.dev/",
+      "mcp_name": "currency"
+    },
+    {
+      "id": "sequential-thinking",
+      "name": "Sequential thinking",
+      "group": "keyless",
+      "what_for": "Step-by-step reasoning for long choices (itinerary order, budget trade-offs)",
+      "free_tier": "No account or key needed",
+      "verified": "2026-11-07",
+      "signup_url": "https://github.com/modelcontextprotocol/servers",
+      "mcp_name": "sequential-thinking"
+    },
+    {
+      "id": "serpapi",
+      "name": "SerpApi",
+      "group": "keyed",
+      "what_for": "Google Maps places, ratings and opening hours; Google Events and Flights",
+      "free_tier": "250 searches per month, 50 per hour (Free plan)",
+      "verified": "2026-11-07",
+      "signup_url": "https://serpapi.com/manage-api-key",
+      "env_var": "SERPAPI_API_KEY",
+      "mcp_name": "serpapi",
+      "mcp_json_template": {
+        "type": "http",
+        "url": "https://mcp.serpapi.com/mcp",
+        "headers": {
+          "Authorization": "Bearer ${SERPAPI_API_KEY}"
+        }
+      },
+      "steps": [
+        "Create a free account at https://serpapi.com/",
+        "Open https://serpapi.com/manage-api-key and copy your API key",
+        "Paste it when asked; it is never shown or stored in the repository"
+      ]
+    },
+    {
+      "id": "apify",
+      "name": "Apify",
+      "group": "keyed",
+      "what_for": "Scraping sites with no other source (Agoda, Klook, Google reviews at scale)",
+      "free_tier": "USD 5 of platform usage per month, no credit card (Free plan)",
+      "verified": "2026-11-07",
+      "signup_url": "https://console.apify.com/settings/integrations",
+      "env_var": "APIFY_TOKEN",
+      "mcp_name": "apify",
+      "mcp_json_template": {
+        "type": "http",
+        "url": "https://mcp.apify.com/?tools=actors,docs,runs,storage",
+        "headers": {
+          "Authorization": "Bearer ${APIFY_TOKEN}"
+        }
+      },
+      "steps": [
+        "Create a free account at https://apify.com/",
+        "Open https://console.apify.com/settings/integrations and copy your API token",
+        "Paste it when asked. Runs spend your USD 5 monthly credit; Claude asks before each run"
+      ]
+    },
+    {
+      "id": "google_maps",
+      "name": "Google Maps Grounding Lite",
+      "group": "keyed",
+      "what_for": "Places, distances and driving or walking routes",
+      "free_tier": "10,000 free requests per month (Essentials), then USD 7 per 1,000; billing must be enabled on the Google Cloud project",
+      "verified": "2026-11-07",
+      "signup_url": "https://developers.google.com/maps/ai/grounding-lite",
+      "env_var": "GOOGLE_MAPS_API_KEY",
+      "mcp_name": "google-maps",
+      "mcp_json_template": {
+        "type": "http",
+        "url": "https://mapstools.googleapis.com/mcp",
+        "headers": {
+          "X-Goog-Api-Key": "${GOOGLE_MAPS_API_KEY}"
+        }
+      },
+      "steps": [
+        "Create or pick a Google Cloud project and enable billing for it (https://console.cloud.google.com/)",
+        "Enable the Maps Experience agent tools API in the API Library",
+        "Create an API key, enable that API on the key and restrict the key to it",
+        "Set a daily quota on the key so you cannot be billed by surprise, then paste the key"
+      ]
+    },
+    {
+      "id": "brave",
+      "name": "Brave Search",
+      "group": "keyed",
+      "what_for": "Independent web search",
+      "free_tier": "USD 5 of free credits per month on the Search plan (the page also advertises up to USD 20); a card is requested to prevent abuse",
+      "verified": "2026-11-07",
+      "signup_url": "https://api-dashboard.search.brave.com/",
+      "env_var": "BRAVE_API_KEY",
+      "mcp_name": "brave-search",
+      "mcp_json_template": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@brave/brave-search-mcp-server"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+        }
+      },
+      "steps": [
+        "Create an account at https://api-dashboard.search.brave.com/",
+        "Subscribe to the Search plan (free credits apply; a card is requested)",
+        "Copy your API key and paste it when asked"
+      ]
+    },
+    {
+      "id": "exa",
+      "name": "Exa (with key)",
+      "group": "keyed",
+      "what_for": "Web search with higher limits than the keyless server",
+      "free_tier": "USD 10 of free credits per month (about 2,500 Lite searches), no card; resets on the 1st",
+      "verified": "2026-11-07",
+      "signup_url": "https://dashboard.exa.ai/api-keys",
+      "env_var": "EXA_API_KEY",
+      "mcp_name": "exa",
+      "mcp_json_template": {
+        "type": "http",
+        "url": "https://mcp.exa.ai/mcp",
+        "headers": {
+          "x-api-key": "${EXA_API_KEY}"
+        }
+      },
+      "steps": [
+        "Create an account at https://dashboard.exa.ai/",
+        "Open https://dashboard.exa.ai/api-keys and copy a key",
+        "Paste it when asked; it replaces the keyless Exa server for this project"
+      ]
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl (with key)",
+      "group": "keyed",
+      "what_for": "Scraping and search with higher limits than the keyless server",
+      "free_tier": "1,000 credits per month on the Free plan, no card",
+      "verified": "2026-11-07",
+      "signup_url": "https://www.firecrawl.dev/",
+      "env_var": "FIRECRAWL_API_KEY",
+      "mcp_name": "firecrawl",
+      "mcp_json_template": {
+        "type": "http",
+        "url": "https://mcp.firecrawl.dev/v2/mcp",
+        "headers": {
+          "Authorization": "Bearer ${FIRECRAWL_API_KEY}"
+        }
+      },
+      "steps": [
+        "Create an account at https://www.firecrawl.dev/",
+        "Copy your API key from the dashboard",
+        "Paste it when asked; it replaces the keyless Firecrawl server for this project"
+      ]
+    },
+    {
+      "id": "booking",
+      "name": "Booking.com",
+      "group": "connector",
+      "what_for": "Hotels, apartments and attractions",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Booking.com and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ],
+      "tool_hint": "accommodations_search"
+    },
+    {
+      "id": "expedia",
+      "name": "Expedia",
+      "group": "connector",
+      "what_for": "Flights and hotels",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Expedia and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ],
+      "tool_hint": "search_hotels"
+    },
+    {
+      "id": "getyourguide",
+      "name": "GetYourGuide",
+      "group": "connector",
+      "what_for": "Tours and activities",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find GetYourGuide and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ],
+      "tool_hint": "search_activities"
+    },
+    {
+      "id": "accuweather",
+      "name": "AccuWeather",
+      "group": "connector",
+      "what_for": "Weather forecasts",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find AccuWeather and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ],
+      "tool_hint": "widgets-daily-claude"
+    },
+    {
+      "id": "tripadvisor",
+      "name": "Tripadvisor",
+      "group": "connector",
+      "what_for": "Hotel reviews and ratings",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Tripadvisor and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "google_calendar",
+      "name": "Google Calendar",
+      "group": "connector",
+      "what_for": "Put the final plan in your calendar (only after you approve)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Google Calendar and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ],
+      "tool_hint": "list_events"
+    },
+    {
+      "id": "openbnb",
+      "name": "OpenBnB (Airbnb, paid)",
+      "group": "connector",
+      "what_for": "Airbnb search and listing details plus maps, when the free airbnb server fails",
+      "free_tier": "No free tier: each call spends prepaid credit. Its account_balance tool (free) shows the balance, the price of each tool and a link to add credit",
+      "verified": "2026-11-07",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "account_balance",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find OpenBnB and click Connect, then follow the sign-in prompts",
+        "Before any paid call Claude shows your balance and asks; with no credit it is simply not used",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "group": "connector",
+      "what_for": "Find your booking confirmations to fill the bookings list (Claude reads and drafts, never sends)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "search_threads",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Gmail and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "google_drive",
+      "name": "Google Drive",
+      "group": "connector",
+      "what_for": "Save the plan or the budget as a document to share",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "search_files",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Google Drive and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "yelp",
+      "name": "Yelp",
+      "group": "connector",
+      "what_for": "Restaurants and bars with reviews (best in North America and Europe)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "yelp_search_local_businesses",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Yelp and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "resy",
+      "name": "Resy",
+      "group": "connector",
+      "what_for": "Restaurant tables and availability (mostly US cities; booking needs your OK)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "display_resy_restaurant_availabilities_app",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Resy and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "group": "connector",
+      "what_for": "Ride price estimates between two places",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "get_estimates_between_two_locations_claude",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Uber and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "ticketmaster",
+      "name": "Ticketmaster",
+      "group": "connector",
+      "what_for": "Concert, show and sport tickets on your dates (buying needs your OK)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "find_tickets",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find Ticketmaster and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "stubhub",
+      "name": "StubHub",
+      "group": "connector",
+      "what_for": "Resale tickets for sold-out events (buying needs your OK)",
+      "free_tier": "Free to connect to your Claude account; the service has its own terms",
+      "verified": "unverified",
+      "signup_url": "https://claude.ai/customize/connectors",
+      "tool_hint": "event-search",
+      "steps": [
+        "This connector belongs to your Claude account, not to this repository: connect it once and every project sees it",
+        "On claude.ai open Customize > Connectors (older layouts: Settings > Connectors)",
+        "Click the + button next to Connectors, find StubHub and click Connect, then follow the sign-in prompts",
+        "Come back to Claude Code and start a new session; the connector's tools appear on their own"
+      ]
+    },
+    {
+      "id": "claude_in_chrome",
+      "name": "Claude in Chrome",
+      "group": "browser",
+      "what_for": "Read sites that have no tool (Trip.com, Agoda, airline sites) in your own Chrome, with your own sign-ins",
+      "free_tier": "Free browser extension; needs a paid Claude plan (Pro, Max, Team or Enterprise). Chrome on Mac, Windows or Linux (not WSL)",
+      "verified": "2026-11-07",
+      "signup_url": "https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn",
+      "steps": [
+        "Install Google Chrome if you do not have it: https://www.google.com/chrome/",
+        "Open https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn , click Add to Chrome, then sign in to the extension with the same Claude account as Claude Code",
+        "Quit Chrome completely and open it again (it picks up the link to Claude Code only when it starts)",
+        "In the terminal: type /chrome in Claude Code and turn on 'Enabled by default' (or quit and start again with: claude --chrome). The panel must say 'Status: Enabled'; if it says 'Not connected', choose 'Reconnect extension'",
+        "In the Claude desktop app instead: Settings > Connectors > Claude in Chrome, turn it on; then in Settings set 'Preferred browser' to Claude in Chrome (type 'browser' in the settings search to find it), and start a new session",
+        "Keep Chrome open while Claude browses. Claude asks before anything that costs money or sends a message"
+      ],
+      "tool_hint": "tabs_context_mcp"
+    }
+  ]
+}
